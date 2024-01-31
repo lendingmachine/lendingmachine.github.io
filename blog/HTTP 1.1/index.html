@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.7"/><meta name="theme-color" content="#663399"/><meta data-react-helmet="true" name="description" content="HTTP에 대한 설명 및 사용되는 속성 정리"/><meta data-react-helmet="true" property="og:title" content="HTTP 구조에 대해"/><meta data-react-helmet="true" property="og:description" content="HTTP에 대한 설명 및 사용되는 속성 정리"/><meta data-react-helmet="true" property="og:image" content="https://www.lendingmachine.co.kr/open-graph-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content=""/><meta data-react-helmet="true" name="twitter:title" content="HTTP 구조에 대해"/><meta data-react-helmet="true" name="twitter:description" content="HTTP에 대한 설명 및 사용되는 속성 정리"/><style data-href="/styles.4da5b7b2541218189572.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#e3eaf2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#3c526d}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#111b27}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em .3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8da1b9}.token.punctuation{color:#e3eaf2}.token.delimiter.important,.token.selector .parent,.token.tag,.token.tag .token.punctuation{color:#6cc}.token.attr-name,.token.boolean,.token.boolean.important,.token.constant,.token.number,.token.selector .token.attribute{color:#e6d37a}.token.class-name,.token.key,.token.parameter,.token.property,.token.property-access,.token.variable{color:#6cb8e6}.token.attr-value,.token.color,.token.inserted,.token.selector .token.value,.token.string,.token.string .token.url-link{color:#91d076}.token.builtin,.token.keyword-array,.token.package,.token.regex{color:#f4adf4}.token.function,.token.selector .token.class,.token.selector .token.id{color:#c699e3}.token.atrule .token.rule,.token.combinator,.token.keyword,.token.operator,.token.pseudo-class,.token.pseudo-element,.token.selector,.token.unit{color:#e9ae7e}.token.deleted,.token.important{color:#cd6660}.token.keyword-this,.token.this{color:#6cb8e6}.token.bold,.token.important,.token.keyword-this,.token.this{font-weight:700}.token.delimiter.important{font-weight:inherit}.token.italic{font-style:italic}.token.entity{cursor:help}.language-markdown .token.title,.language-markdown .token.title .token.punctuation{color:#6cb8e6;font-weight:700}.language-markdown .token.blockquote.punctuation{color:#f4adf4}.language-markdown .token.code{color:#6cc}.language-markdown .token.hr.punctuation{color:#6cb8e6}.language-markdown .token.url .token.content{color:#91d076}.language-markdown .token.url-link{color:#e6d37a}.language-markdown .token.list.punctuation{color:#f4adf4}.language-json .token.operator,.language-markdown .token.table-header{color:#e3eaf2}.language-scss .token.variable{color:#6cc}.token.cr:before,.token.lf:before,.token.space:before,.token.tab:not(:empty):before{color:#8da1b9}div.code-toolbar>.toolbar a,div.code-toolbar>.toolbar button{background:#6cb8e6;color:#111b27}div.code-toolbar>.toolbar a:focus,div.code-toolbar>.toolbar a:hover,div.code-toolbar>.toolbar button:focus,div.code-toolbar>.toolbar button:hover{background:#6cb8e6da;color:#111b27;text-decoration:none}div.code-toolbar>.toolbar span,div.code-toolbar>.toolbar span:focus,div.code-toolbar>.toolbar span:hover{background:#8da1b9;color:#111b27}.line-highlight{background:#3c526d5f;background:linear-gradient(90deg,#3c526d5f 70%,#3c526d55)}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8da1b9;box-shadow:0 1px #3c526d;color:#111b27}pre[id].linkable-line-numbers span.line-numbers-rows>span:hover:before{background-color:#8da1b918}.line-numbers .line-numbers-rows{background:#0b121b7a;border-right:1px solid #0b121b}.line-numbers-rows>span:before{color:#8da1b9da}.rainbow-braces .token.punctuation.brace-level-1,.rainbow-braces .token.punctuation.brace-level-5,.rainbow-braces .token.punctuation.brace-level-9{color:#e6d37a}.rainbow-braces .token.punctuation.brace-level-10,.rainbow-braces .token.punctuation.brace-level-2,.rainbow-braces .token.punctuation.brace-level-6{color:#f4adf4}.rainbow-braces .token.punctuation.brace-level-11,.rainbow-braces .token.punctuation.brace-level-3,.rainbow-braces .token.punctuation.brace-level-7{color:#6cb8e6}.rainbow-braces .token.punctuation.brace-level-12,.rainbow-braces .token.punctuation.brace-level-4,.rainbow-braces .token.punctuation.brace-level-8{color:#c699e3}pre.diff-highlight>code .token.deleted:not(.prefix),pre>code.diff-highlight .token.deleted:not(.prefix){background-color:#cd66601f}pre.diff-highlight>code .token.inserted:not(.prefix),pre>code.diff-highlight .token.inserted:not(.prefix){background-color:#91d0761f}.command-line-prompt{border-right:1px solid #0b121b}.command-line-prompt>span:before{color:#8da1b9da}</style><style data-styled="" data-styled-version="5.3.11">.bvltpV{margin-left:auto;margin-right:auto;max-width:1300px;padding-left:var(--size-700);padding-right:var(--size-700);height:100%;}/*!sc*/
+@media screen and (max-width:1000px){.bvltpV{padding-left:var(--size-400);padding-right:var(--size-400);}}/*!sc*/
+data-styled.g1[id="container__Container-sc-g6pcgm-0"]{content:"bvltpV,"}/*!sc*/
+.jZTWAY{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g2[id="theme-switch__StyledThemeSwitch-sc-1laae5k-0"]{content:"jZTWAY,"}/*!sc*/
+.knrdjO{padding-top:var(--size-300);}/*!sc*/
+data-styled.g3[id="header__StyledHeader-sc-1344zpp-0"]{content:"knrdjO,"}/*!sc*/
+.KxiDO{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+data-styled.g4[id="header__HeaderWrapper-sc-1344zpp-1"]{content:"KxiDO,"}/*!sc*/
+.bAFHxG a{text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);color:inherit;}/*!sc*/
+data-styled.g5[id="header__HeaderTitle-sc-1344zpp-2"]{content:"bAFHxG,"}/*!sc*/
+.erhRhI{position:static;padding:0;background:transparent;-webkit-backdrop-filter:unset;backdrop-filter:unset;}/*!sc*/
+data-styled.g6[id="header__StyledNav-sc-1344zpp-3"]{content:"erhRhI,"}/*!sc*/
+.gfDPkb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;padding:0;list-style-type:none;}/*!sc*/
+data-styled.g7[id="header__StyledNavList-sc-1344zpp-4"]{content:"gfDPkb,"}/*!sc*/
+.jZnwNh:not(:last-of-type){margin-right:2rem;}/*!sc*/
+@media screen and (max-width:700px){.jZnwNh:not(:last-of-type){margin-right:1rem;}}/*!sc*/
+.jZnwNh a{color:inherit;text-transform:uppercase;font-size:var(--size-300);-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.1rem;-moz-letter-spacing:0.1rem;-ms-letter-spacing:0.1rem;letter-spacing:0.1rem;}/*!sc*/
+@media screen and (max-width:700px){.jZnwNh a{font-size:0.7rem;}}/*!sc*/
+data-styled.g8[id="header__StyledNavListItem-sc-1344zpp-5"]{content:"jZnwNh,"}/*!sc*/
+*,*::before,*::after{box-sizing:border-box;}/*!sc*/
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0;}/*!sc*/
+ul[role='list'],ol[role='list']{list-style:none;}/*!sc*/
+html:focus-within{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}/*!sc*/
+html{height:-webkit-fill-available;}/*!sc*/
+body{min-height:100vh;min-height:-webkit-fill-available;text-rendering:optimizeSpeed;line-height:1.5;}/*!sc*/
+a:not([class]){-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}/*!sc*/
+img,picture{max-width:100%;display:block;}/*!sc*/
+input,button,textarea,select{font:inherit;}/*!sc*/
+@media (prefers-reduced-motion:reduce){html:focus-within{-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;}*,*::before,*::after{-webkit-animation-duration:0.01ms !important;animation-duration:0.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;-webkit-transition-duration:0.01ms !important;transition-duration:0.01ms !important;-webkit-scroll-behavior:auto !important;-moz-scroll-behavior:auto !important;-ms-scroll-behavior:auto !important;scroll-behavior:auto !important;}}/*!sc*/
+html{width:100vw;overflow-x:hidden;}/*!sc*/
+body::-webkit-scrollbar{width:10px;}/*!sc*/
+body::-webkit-scrollbar-thumb{background-color:rgba(55,41,44,.4);}/*!sc*/
+body::-webkit-scrollbar-track{background:transparent;}/*!sc*/
+:root{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;--size-300:0.75rem;--size-400:1rem;--size-500:1.33rem;--size-600:1.77rem;--size-700:2.36rem;--size-800:3.15rem;--size-900:4.2rem;}/*!sc*/
+body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;-webkit-transition-property:background-color,color,background;transition-property:background-color,color,background;-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;background-attachment:fixed;font-smoothing:antialiased;}/*!sc*/
+body.light-mode{color:#37292C;background-color:white;background-image:linear-gradient(315deg,#ccfbf1 0%,#ffe4e6 50%);}/*!sc*/
+body.dark-mode{color:#e9e9e9;background-color:#252526;}/*!sc*/
+body.dark-mode ::selection{background:#e9e9e9;color:#252526;}/*!sc*/
+body.light-mode ::selection{background:#37292C;color:white;}/*!sc*/
+h1,h2,h3,h4{line-height:1.125;}/*!sc*/
+h1,h2,h3{font-weight:700;}/*!sc*/
+h1{font-size:var(--size-800);}/*!sc*/
+h2{font-size:var(--size-700);}/*!sc*/
+h3{font-size:var(--size-600);}/*!sc*/
+p{font-size:var(--size-400);}/*!sc*/
+p,li{max-width:none;}/*!sc*/
+.gatsby-resp-image-wrapper{margin-left:0 !important;}/*!sc*/
+data-styled.g9[id="sc-global-bmpIkG1"]{content:"sc-global-bmpIkG1,"}/*!sc*/
+.iAhdi{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.iAhdi main{margin-top:auto;margin-bottom:auto;padding-bottom:150px;}/*!sc*/
+.iAhdi footer{margin-top:auto;}/*!sc*/
+data-styled.g10[id="layout__LayoutWrapper-sc-qrswv8-0"]{content:"iAhdi,"}/*!sc*/
+.dWWUBf{margin-right:0.6rem;margin-bottom:0.6rem;text-transform:uppercase;font-size:var(--size-300);}/*!sc*/
+.dWWUBf a{position:relative;z-index:2;-webkit-text-decoration:none;text-decoration:none;color:inherit;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,1);border-radius:4px;}/*!sc*/
+.dWWUBf a:hover{background-color:rgba(255,255,255,0.9);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.7);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a:hover{background-color:rgba(255,255,255,1);}/*!sc*/
+body.dark-mode .tags__Tag-sc-16itk8x-0 a{background-color:#212122;border:1px solid #1a1a1b;opacity:0.8;}/*!sc*/
+data-styled.g12[id="tags__Tag-sc-16itk8x-0"]{content:"dWWUBf,"}/*!sc*/
+.gUuEws{padding-top:var(--size-900);padding-bottom:var(--size-900);margin-left:auto;margin-right:auto;max-width:70ch;word-wrap:break-word;}/*!sc*/
+data-styled.g25[id="post-template__PostWrapper-sc-afk1br-0"]{content:"gUuEws,"}/*!sc*/
+.djJips{font-size:var(--size-700);}/*!sc*/
+data-styled.g26[id="post-template__PostTitle-sc-afk1br-1"]{content:"djJips,"}/*!sc*/
+.fdaqUJ{font-size:var(--size-400);display:block;margin-top:0.5rem;text-transform:uppercase;}/*!sc*/
+data-styled.g27[id="post-template__PostDate-sc-afk1br-2"]{content:"fdaqUJ,"}/*!sc*/
+.cyqufD{padding-top:var(--size-800);}/*!sc*/
+.cyqufD > * + *{margin-top:var(--size-300);}/*!sc*/
+.cyqufD > p + p{margin-top:var(--size-700);}/*!sc*/
+.cyqufD * + h1,.cyqufD * + h2,.cyqufD * + h3{margin-top:var(--size-900);}/*!sc*/
+.cyqufD h1{font-size:var(--size-700);}/*!sc*/
+.cyqufD h2{font-size:var(--size-600);}/*!sc*/
+.cyqufD h3{font-size:var(--size-500);}/*!sc*/
+.cyqufD b,.cyqufD strong{font-weight:600;}/*!sc*/
+.cyqufD a{color:inherit;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration-thickness:0.125rem;text-decoration-thickness:0.125rem;}/*!sc*/
+.cyqufD blockquote{padding-left:var(--size-400);border-left:5px solid;font-style:italic;}/*!sc*/
+.cyqufD code{font-family:"Source Sans Pro",monospace;overflow-x:auto;white-space:pre-wrap;}/*!sc*/
+.cyqufD pre{overflow-x:auto;white-space:pre-wrap;max-width:100%;}/*!sc*/
+data-styled.g28[id="post-template__PostContent-sc-afk1br-3"]{content:"cyqufD,"}/*!sc*/
+.ftROMW{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:1rem;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:var(--size-900);}/*!sc*/
+.ftROMW > *{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:1rem;padding-top:0.5rem;padding-bottom:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-bottom:1rem;}/*!sc*/
+.ftROMW > *:hover{background-color:rgba(255,255,255,0.5);}/*!sc*/
+.ftROMW span{text-transform:uppercase;opacity:0.6;font-size:var(--size-400);padding-bottom:var(--size-500);}/*!sc*/
+.ftROMW a{color:inherit;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);text-transform:capitalize;}/*!sc*/
+.ftROMW a::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;}/*!sc*/
+data-styled.g29[id="post-template__PostPagination-sc-afk1br-4"]{content:"ftROMW,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Gatsby Glass RSS Feed" href="/rss.xml"/><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Poppins:400,400i,700&amp;display=swap" rel="stylesheet"/><link rel="icon" href="/favicon-32x32.png?v=159e0719d0cdbde15ad0cca727d0588f" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=159e0719d0cdbde15ad0cca727d0588f"/><title data-react-helmet="true">HTTP 구조에 대해 - 렌딩머신 기술블로그</title></head><body><script id="gatsby-plugin-use-dark-mode">(function(o,l,t){function c(a){document.body.classList.add(a?o:l);document.body.classList.remove(a?l:o)}var s="(prefers-color-scheme: dark)";var r=window.matchMedia(s);var i=r.media===s;var e=null;try{e=localStorage.getItem(t)}catch(a){}var d=e!==null;if(d){e=JSON.parse(e)}if(d){c(e)}else if(i){c(r.matches);localStorage.setItem(t,r.matches)}else{var m=document.body.classList.contains(o);localStorage.setItem(t,JSON.stringify(m))}})("dark-mode","light-mode","darkMode");</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__LayoutWrapper-sc-qrswv8-0 iAhdi"><header class="header__StyledHeader-sc-1344zpp-0 knrdjO"><div class="container__Container-sc-g6pcgm-0 header__HeaderWrapper-sc-1344zpp-1 bvltpV KxiDO"><div class="header__HeaderTitle-sc-1344zpp-2 bAFHxG"><a href="/">렌딩머신 기술블로그</a></div><nav class="header__StyledNav-sc-1344zpp-3 erhRhI"><ul class="header__StyledNavList-sc-1344zpp-4 gfDPkb"><li class="header__StyledNavListItem-sc-1344zpp-5 jZnwNh"><a href="/blog">Blog</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 jZnwNh"><div class="theme-switch__StyledThemeSwitch-sc-1laae5k-0 jZTWAY"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="black" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="cursor:pointer;transform:rotate(90deg)"><mask id="circle-mask-0"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><circle style="cx:100%;cy:0%" r="9" fill="black"></circle></mask><circle cx="12" cy="12" fill="black" style="r:5px" mask="url(#circle-mask-0)"></circle><g stroke="currentColor" style="opacity:1"><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></g></svg></div></li></ul></nav></div></header><main><div class="container__Container-sc-g6pcgm-0 bvltpV"><div class="post-template__PostWrapper-sc-afk1br-0 gUuEws"><article><h1 class="post-template__PostTitle-sc-afk1br-1 djJips">HTTP 구조에 대해</h1><span class="post-template__PostDate-sc-afk1br-2 fdaqUJ">January 30, 2024</span><section class="post-template__PostContent-sc-afk1br-3 cyqufD"><h1>HTTP</h1>
+<p>클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다.</p>
+<p>이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다.</p>
+<h1>1. HTTP 1.1 구조에 대해</h1>
+<h2>1.1 request 구조</h2>
+<p>HTTP request는 크게 3가지로 나눠집니다.</p>
+<ul>
+<li>start line</li>
+<li>headers</li>
+<li>body</li>
+</ul>
+<p>각각에 대해 알아보겠습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 454px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAENklEQVQ4y32Sa0xTZxzGn3MKRWihRaClhXIpvVBOz2lPLxR6sUUm62SahS1Dom4sTgjJEHRMwBWUONgX5xxmZBe3LNElS9TpzNCBG4hOtg+bBjYz4YPROS84XGQEMQP9Lwf9uj3JmyfvP3l/b573ffBomF85088ZBvfkCxMHLZazvUZu4pDF8kNfQdHtYzbT3yc50+wpzkN0BNfaSjPPN7iMg5scxtEGV96V7SWGX5q9uSdrBWlvvRMLpIPO83k05gGAEICVAHwALADCAHIAMAdj2bxaIVOPNrjclYVp4dXWtEi1oCneIGrdL7syXaE8VVlTILviepvfivkjoud+zZr4G12+1CO1Req/dgdSvm90qs+95lSNt3jUf3b5lfePO2y0twq33wykX2/3Z093BHVTsYD+t23F2ddaS7OmO4KZdzuDhqlYIBWLp/lCumkDXVrLEhGOb7SzRJ+ATq1j6MvnmLFaP7P4LW+89bED051BzHatwPzuMB68FcbNHX7M7AphKhaQLltyLA7bLVNHi+AW5DIpni5ZLsVHsSEZRJPoedEAOsfnV2VkSzAF9UXV1Fuhor6oivatUlFvRerMrpCChtfjbmeQwf1Bzrq/SQ9lIqsHEAHwFIDVAErwWMmfxwwueRyjHtrs9L7AZ0Re9eq8G0Wtf6OodW8P50QmW3z2sSYvxpu8DBaH7Ja5bzgE+KR4AEkA0gGkAlAC7BJxboAzSn5rR8DwRQ1nO7yesxyqLio88RJfcHSDXZhs8Rmutpbi61oBWPjObh37zIT/km8NQCN8PhCP8W1e/J+kP8DDYy7XZl1BUo2oKdriz9Y0+rMM28M5mY3+LN27z5o0V1pKFbNHBRv91Irf20r1/bVC0alXBGt/rVB4pk60nKsXzac3OawjdaLlQqPHBLooFkjx5HFMFcugXMYgJGMZgWUQjGOZEjnDKg7FDC51kmz52XrR6dApHU6d0mXXKrxOvdLpM6Rw0ozPVAglOSlmzB8W3Zd9lfEz3UHVhUaPkvaUKwc3OVRXW0uV481e1e32oGLhhLNwdL0P0x1B1T/dYc2jt8sy7u0MaaZiAe0f7X7tQndEu9gT0d/bGcrCwzN283y/ACIG9cV6+AwpKDOqUWFOxfEaAdXeNNDPztwyfRrovYoE+vCZdNq3Kp3efzptaX0QleCJ9E75UkexOMRbiVYvPSrLIMQyqGQZRBPimAxpFscyyq96ch2qRFnKSJ0oRIxqZ7WgMUUty+1lBWpbfbHePdnis1zc4sGvzcUMHg7zZvrRgRUOhXR+GQDVk9okvrFOahBk45+arWAhH2vyGnvXmLn9a822vZUm7sDzVtNHVVZx4nVfngS8tPUx0EEjfPzcAKekB/5lRFE5UUUC3fEtmxvgFDThTqRRwRzlUp9UIyajG1tkS365XkbUJSPqBNEB0N2t+BfwTnd8Q1W5jwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="HTTP구조"
+        title="HTTP구조"
+        src="/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png"
+        srcset="/static/4ab09d3efaf3889686d750ab25c9c646/c26ae/HTTP%EA%B5%AC%EC%A1%B0.png 158w,
+/static/4ab09d3efaf3889686d750ab25c9c646/6bdcf/HTTP%EA%B5%AC%EC%A1%B0.png 315w,
+/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png 454w"
+        sizes="(max-width: 454px) 100vw, 454px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h3>1.1.1 start Line</h3>
+<p>말 그대로 HTTP request의 첫 라인을 의미합니다.
+또한 이 start line도 3부분으로 나눌 수 있습니다.</p>
+<ul>
+<li>HTTP Method
+<ul>
+<li>해당 request가 의도한 action을 정의하는 부분.HTTP Methods에는 GET, POST, PUT, DELETE, OPTIONS 등등이 있다.주로 GET 과 POST과 쓰임.</li>
+</ul>
+</li>
+<li>Request target
+<ul>
+<li>해당 request가 전송되는 목표 uri.예를 들어 /login.</li>
+</ul>
+</li>
+<li>HTTP Version
+<ul>
+<li>말 그대로 사용되는 HTTP 버젼. 버젼에는 1.0, 1.1, 2.0 등이 있다.</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.2 headers</h3>
+<ul>
+<li>request에 대한 추가 정보를 담고 있는 부분입니다.</li>
+<li>key : value 형태로 되어있습니다.</li>
+<li>header도 크게 4가지 부분으로 나누게 됩니다.
+<ul>
+<li>General Header(공통 헤더)
+<ul>
+<li>요청과 응답 모두에 적용되지만 바디에서 최종적으로 전송되는 데이터와는 관련이 없는 헤더</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Date">Date</a> : 현재시간</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Pragma">Pragma</a> : 캐시제어 , HTTP/1.0에서 쓰던 것으로 HTTP/1.1에서는 Cache-Control이 쓰인다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cache-Control">Cache-Control</a> : 캐시를 제어할 때 사용</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade</a> : 프로토콜 변경시 사용</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Via">Via</a> : 중계(프록시)서버의 이름, 버전, 호스트명</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Connection">Connection</a> : 네트워크 접속을 유지할지 말지 제어. HTTP/1.1은 kepp-alive 로 연결 유지하는게 default 값</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Transfer-Encoding">Transfer-Encoding</a> : 사용자에게 entity를 안전하게 전송하기 위해 사용하는 인코딩 형식을 지정</li>
+</ul>
+</li>
+<li>Entity Header(엔티티 헤더)
+<ul>
+<li>컨텐츠 길이나 MIME 타입과 같이 엔티티 바디에 대한 자세한 정보를 포함하는 헤더</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Type">Content-type</a> : 리소스의 media type 명시 ex) application/json, text/html</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Length">Content-Length</a> : 바이트 단위를 가지는 개체 본문의 크기</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Language">Content-language</a> : 본문을 이해하는데 가장 적절한 언어</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Location">Content-location</a> : 반환된 데이터 개체의 실제 위치 ex) /index.html</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Disposition">Content-disposition</a> : 응답 메세지를 브라우저가 어떻게 처리할지. 주로 다운로드에 사용</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> : 다른 외부 파일을 불러오는 경우 차단할 리소스와 불러올 리소스 명시
+<ul>
+<li>ex) default-src https -> https로만 파일을 가져옴</li>
+<li>ex) default-src ‘self’ -> 자기 도메인에서만 가져옴</li>
+<li>ex) default-src ‘none’ -> 외부파일은 가져올 수 없음</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a> : 본문의 리소스 압축 방식. 주로 Content-Type과 같이 사용되며 참조되는 미디어 타입을 얻도록 디코드하는 방법을 클라이언트가 알게 해줍니다.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location">Location</a> : 301, 302 상태코드일 때만 볼 수 있는 헤더로 서버의 응답이 다른 곳에 있다고 알려주면서 해당 위치(URI)를 지정</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Last-Modified">Last-Modified</a> : 리소스의 마지막 수정 날짜</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Allow">Allow</a> : 지원되는 HTTP 요청 메소드 ex) GET, HEAD, POST</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers">Expires</a> : 자원의 만료 일자</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/ETag">ETag</a> : 리소스의 버전을 식별하는 고유한 문자열 검사기(주로 캐시 확인용으로 사용)</li>
+</ul>
+</li>
+<li>Request Header(요청 헤더)
+<ul>
+<li>HTTP 요청에서 사용되지만 메시지의 컨텐츠와 관련이 없는 패치될 리소스나 클라이언트 자체에 대한 자세한 정보를 포함하는 헤더</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Host">Host</a> : 요청하려는 서버 호스트 이름과 포트번호</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-agent</a> : 클라이언트 프로그램 정보 ex) Mozilla/4.0, Windows NT5.1</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Referer">Referer</a> : 현재 페이지로 연결되는 링크가 있던 이전 웹 페이지의 주소</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept">Accept</a> : 클라이언트가 처리 가능한 MIME Type 종류 나열</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Charset">Accept-charset</a> : 클라이언트가 지원가능한 문자열 인코딩 방식</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Language">Accept-language</a> : 클라이언트가 지원가능한 언어 나열</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Encoding">Accept-encoding</a> : 클라이언트가 해석가능한 압축 방식 지정</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</a> : 여기에 쓰여진 시간 이후로 변경된 리소스 취득. 캐시가 만료되었을 때에만 데이터를 전송하는데 사용</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Authorization">Authorization</a> : 인증 토큰을 서버로 보낼 때 쓰이는 헤더</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Origin">Origin</a> : 서버로 Post 요청을 보낼 때 요청이 어느 주소에서 시작되었는지 나타내는 값. 경로 정보는 포함하지 않고 서버 이름만 포함
+<ul>
+<li>이 값으로 요청을 보낸 주소와 받는 주소가 다르면 CORS 에러가 난다.</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cookie">Cookie</a> : 쿠기 값 key-value로 표현된다. Set-Cookie 헤더와 함께 서버로부터 이전에 전송됐던 저장된 HTTP 쿠키를 포함</li>
+</ul>
+</li>
+<li>Response Header(응답 헤더)
+<ul>
+<li>위치 또는 서버 자체에 대한 정보(이름, 버전)과 같이 응답에 대한 부가적인 정보를 갖는 헤더</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Server">Server</a> : 웹서버의 종류</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Age">Age</a> : max-age 시간내에서 얼마나 흘렀는지 초 단위로 알려주는 값</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-policy</a> : 서버 referrer 정책을 알려주는 값 ex) origin, no-referrer, unsafe-url</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate">WWW-Authenticate</a> : 사용자 인증이 필요한 자원을 요구할 시, 서버가 제공하는 인증 방식</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate">Proxy-Authenticate</a> : 요청한 서버가 프록시 서버인 경우 유저 인증을 위한 값</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> : 서버측에서 클라이언트에게 세션 쿠키 정보를 설정 (RFC 2965에서 규정)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.3 body</h3>
+<p>해당 reqeust의 실제 메세지 및 내용.</p>
+<p>body가 없는 request도 많습니다.</p>
+<p>예를 들어, GET request들은 대부분 body가 없는 경우가 많습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/041320846f5a79ac29847d29058c0695/a1dd2/body%EA%B5%AC%EC%A1%B0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 34.177215189873415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA5klEQVQoz62RS25DIQxFWWhW0a10DVHG7Ro6zaw7yPBBqwRjGx5wI0Oe8lGHtXQE/sC1wTEzRAQ5Zwgz+AGLq+rIvWJxFkEtguMp4/2LsD8SnPce58sFRIQQApZlueHhQxhxI6X0AA1BSoyWGR/fjN0h4u0zwplSKWUUqqmrQrJCmBDjz+jEclu3tlISdEzbVvSGWlY4K7iPOMdMicGJIETIPIUsvpG0oqwNvfdB6x0kFb8xw9XWcI4Rqyo0xvE+rOssNuHboWfaoLU7ZvYHzhwbeSRqfSoy+os/6X8K2T3ONv9lJnYFOwohYjAcGU8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="body구조"
+        title="body구조"
+        src="/static/041320846f5a79ac29847d29058c0695/f058b/body%EA%B5%AC%EC%A1%B0.png"
+        srcset="/static/041320846f5a79ac29847d29058c0695/c26ae/body%EA%B5%AC%EC%A1%B0.png 158w,
+/static/041320846f5a79ac29847d29058c0695/6bdcf/body%EA%B5%AC%EC%A1%B0.png 315w,
+/static/041320846f5a79ac29847d29058c0695/f058b/body%EA%B5%AC%EC%A1%B0.png 630w,
+/static/041320846f5a79ac29847d29058c0695/a1dd2/body%EA%B5%AC%EC%A1%B0.png 838w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h2>1.2 response 구조</h2>
+<p>request와 마찬가지로 크게 3부분으로 나뉩니다.</p>
+<ul>
+<li>Status line
+<ul>
+<li>response의 상태를 나타내며 크게 3부분으로 나뉩니다.</li>
+<li>HTTP 버전</li>
+<li>Status code: 응답 상태를 나타내는 코드. 숫자로 되어 있는 코드.예를 들어, 200</li>
+<li>Status text: 응답 상태를 간략하게 설명해주는 부분.예를 들어, “Not Found”</li>
+</ul>
+</li>
+<li>Headers
+<ul>
+<li>Response의 headers와 동일하다.</li>
+<li>다만 response에서만 사용되는 header 값들이 있다.</li>
+<li>예를 들어, User-Agent 대신에 Server 헤더가 사용된다.</li>
+</ul>
+</li>
+<li>body
+<ul>
+<li>Response의 body와 일반적으로 동일하다.</li>
+<li>Request와 마찬가지로 모든 response가 body가 있지는 않다. 데이터를 전송할 필요가 없을경우 body가 비어있게 된다.</li>
+</ul>
+</li>
+</ul>
+<h1>2. HTTP 1.1과 2.0의 차이점</h1>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/10a8b056372885c4cf9561a001010ca5/31493/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6UlEQVQoz2WS2Y7TQBBF51v5EaSReOIPWAQ/wQMPLBJIkQAJkJ2RZiFS4mRiO7Hdm7u6eitod8bMwH2r7jqu27d8RkRN0wjOm7atm8Y617atUoomxRiJiHPedZ0QYrPZGGOGSUR0RkT75VIWBTkbx5GI/oeFEMfDYS77vv8LA0AkitZ6DWJorqsy+ED35LxHa2cYEe1UJlhKab0bIwqvTbSD4vkuj07dnIvVKlUh5GHGmBPMd1V/vQTFw3QEGv6BrRDs86cgeD4DAERMsNb6drsl68j5oNTYt1eb0jmfQEqk977e78dD65oGdzvyHo2xONk2xrRtS0Q6WhG0jnjgBzdPJgoxdnUtLy4IwNa1Xa+r6lKBOtlmt9vjVTFK5tFQTK7sPTjZRtQDi94rNfTb1Zevb5js7wLjLL3WuiClZsebaumcewBb2yk2ID9Cz7wqNz+4vFuVUsrHAAGFG5XXdbfPT5oFCNt+1yMbgBlvxKgA4ASPgByVdjrEkBMK4eGene9kwsIUfph0go/yp7FD3gwRLRaLqqryL5EDF7ASMO15+npZLouiOMHvLh+tu7fTXdrQ+fnjDx/f5wm5+9v6yffqaTIVUhavXr98/uJZgkP0nSo11vNkIZlBuG+b6RsGv+aGUctRyz/wb37MI+POVlBOAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="HTTP버전차이"
+        title="HTTP버전차이"
+        src="/static/10a8b056372885c4cf9561a001010ca5/f058b/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png"
+        srcset="/static/10a8b056372885c4cf9561a001010ca5/c26ae/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 158w,
+/static/10a8b056372885c4cf9561a001010ca5/6bdcf/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 315w,
+/static/10a8b056372885c4cf9561a001010ca5/f058b/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 630w,
+/static/10a8b056372885c4cf9561a001010ca5/31493/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 664w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h2>2.1 HTTP 1.1의 특징(문제점)</h2>
+<ul>
+<li>Connection 한 개당 하나의 요청을 처리함 (비연결지향)
+<ul>
+<li>동시에 리소스를 받기가 안됩니다.</li>
+<li>응답을 받은 뒤 연결을 끊어버립니다.</li>
+<li>요청과 응답이 순차적으로 이루어집니다.</li>
+<li>HTTP 문서 내에 포함된 다수의 리소스(image, css, script)를 처리하려면 요청할 리소스의 개수에 비례하여 Latency(대기시간)이 길어지게 됩니다.</li>
+</ul>
+</li>
+<li>HOL(Head Of Line) Blocking이 발생할 수 있다.
+<ul>
+<li>HOL이란 같은 큐에서 첫 번째 패킷에 의해 지연될 때 발생하는 성능 저하 현상</li>
+</ul>
+</li>
+<li>RTT(Round Trip Time) 증가
+<ul>
+<li>Connection 하나에 요청 한 개를 처리하는 특성으로 매 요청별로 connection을 만들게 되고 TCP상에서 동작하는 HTTP 특성 상 3-way handshake가 반복적으로 일어나 네트워크 지연을 초래합니다.</li>
+</ul>
+</li>
+<li>무거운 Header 구조 (무상태성)
+<ul>
+<li>매 요청마다 중복된 헤더값을 전송하게 됩니다.</li>
+<li>서버 도메인에 관련된 쿠키 정보도 헤더에 포함되기 떄문에 크기가 증가합니다.</li>
+</ul>
+</li>
+</ul>
+<h2>2.2 HTTP 1.1 개선 방법</h2>
+<ol>
+<li>
+<p>Image Spriting</p>
+<ol>
+<li>웹페이지를 구성하는 다양한 아이콘 이미지 파일 요청 횟수를 줄이기 위해 아이콘을 하나의 큰 이미지로 만든 뒤 css로 좌표를 지정하여 표시하는 방법입니다.</li>
+<li>아래의 이미지에서 css로 하나의 아이콘만 선택해서 보여줄 수 있기 때문에 Icon을 여러 번 요청할 필요가 없어집니다.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 430px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQY0wExAc7+AObr8PHy9/Dd5/fq8Ozj6PTs7PLm4+3w8uHq7uze4e7e4PDp3vLx68/f4+fy9Nbn5+zz9eHo7PDk5evb2gBHfsVsYLb/L5/8SaP7mMrrcHvmZUR7lq5Yq9nUR3n1Slj/sSrBwWRV3f8r2es/7eZEutRtqNHaanL/X10AMWGgU0mV2xR60zGCzXWhw1hivEouYHaMQ4qyrS5byTE+3o4XnZ5ON7DQHbPCIb65LpatTIKntlBX3kRCADw8PTg4OEJAQTs6O0JBQjo6Oj49PDo6Ozw+P0E9PkA9P0BAPTs6OkRISjo7O0JGRjo6Oj9BQj89PURBQQA5OTg2NzY3Ozg2ODc6Ozo3OTk3OTo4ODg7Ojo5PDs5PDs5Ojw4ODlAPT06ODg9Ozs4NzY6OTk4Ojo6PDzTF5PQ+uW2zQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="이미지스플리팅"
+        title="이미지스플리팅"
+        src="/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png"
+        srcset="/static/ed9623b17cb80fd6ab59700940fec8c0/c26ae/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 158w,
+/static/ed9623b17cb80fd6ab59700940fec8c0/6bdcf/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 315w,
+/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 430w"
+        sizes="(max-width: 430px) 100vw, 430px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+</li>
+<li>
+<p>Domain Sharding</p>
+<ol>
+<li>브라우저 1.1의 단점을 극복하기 위해 여러 개의 Connection을 생성하여 병렬로 요청을 보내는 방법입니다.</li>
+<li>단 브라우저 별로 Connection 개수 제한이 존재하므로 근본적인 해결은 힘듭니다.</li>
+</ol>
+</li>
+<li>
+<p>Minified CSS/Javascript</p>
+<ol>
+<li>HTTP를 통해 전송되는 데이터 용량을 줄이기 위해 CSS, JavsScript를 축소합니다.</li>
+</ol>
+</li>
+<li>
+<p>Load Faster</p>
+<ol>
+<li>Head 태그에 자바스크립트를 삽입 후 async나 defer 옵션을 통해 브라우저의 파싱을 멈추지 않고 로드 합니다.</li>
+</ol>
+</li>
+<li>
+<p>Data URL Scheme</p>
+<ol>
+<li>HTML 문서 내 이미지 리소르를 Base64로 인코딩된 이미지 데이터로 직접 기술하는 방식으로 서버의 요청을 줄일 수 있습니다.</li>
+<li>단 해당 방법의 단점으로
+<ol>
+<li>원본 파일보다 용량이 커지고</li>
+<li>문자열이 길어지므로 코드 가독성이 떨어지고</li>
+<li>브라우저에 문자 길이 제한이 있어서 용량이 큰 이미지는 처리가 불가능합니다.</li>
+</ol>
+</li>
+</ol>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data:image/png;base64,iVBORw0KGgoAAA
+ANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU
+5ErkJggg==<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Red dot<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre></div>
+</li>
+<li>
+<p>구글의 SPDY</p>
+<ol>
+<li>하지만 위의 방법으로는 근본적인 해결 방법이 아니기 때문에 구글이 더 빠른 웹을 만들기 위해 만든 프로토콜입니다.</li>
+<li>SPDY는 압축, 다중화, 우선 순위 설정을 통한 레이턴시 감소를 달성합니다.</li>
+<li>단 HTTP를 대체하는 프로토콜은 아니고 HTTP를 통한 전송을 재정의 합니다.</li>
+<li>이는 HTTP 2.0 초안의 참고 규격이 됩니다.</li>
+</ol>
+</li>
+</ol>
+<h1>3. HTTP 2.0</h1>
+<p>HTTP 2.0은 HTTP1.1을 완전하게 재작성하지 않고 프로토콜 성능에 초점을 맞춰 수정한 버전입니다.</p>
+<p>특히 사용자가 느끼는 레이턴시, 네트워크, 서버 리소스 사용량 등 성능에 초점을 맞춰 개선되었습니다.</p>
+<h2>3.1 특징</h2>
+<ul>
+<li>Multiplexed Streams: connection
+<ul>
+<li>한 개로 동시에 여러 개의 메시지를 주고 받을 수 있으며, 응답은 순서에 상관없이 stream으로 주고 받는다.</li>
+</ul>
+</li>
+<li>Stream Prioritization
+<ul>
+<li>리소스 간의 의존관계에 따른 우선순위를 설정하여 문제를 해결합니다.</li>
+<li>예를 들어 요청한 HTML에 css1개 image 2개가 존재할 때 이미지 파일보다 CSS파일이 늦게 수신되면 렌더링에 문제가 생기므로 순서를 조절합니다.</li>
+</ul>
+</li>
+<li>Server Push
+<ul>
+<li>HTML 문서 상에서 필요한 리소스를 클라이언트 요청 없이 보낼 수 있다.</li>
+<li>즉 이전에는 HTML 파일 받고 분석 → 필요한 파일 재요청 이었지만</li>
+<li>이를 Server Push 기법을 통해 재요청 없이 서버에서 push를 해서 클라이언트가 받을 수 있습니다.</li>
+</ul>
+</li>
+<li>Header Compression
+<ul>
+<li>클라이언트가 요청을 여러번 보낼 시 헤더 중복된 부분을 검출해서 중복되지 않는 부분만 보냅니다.</li>
+</ul>
+</li>
+</ul></section></article><nav class="post-template__PostPagination-sc-afk1br-4 ftROMW"><div><span>next</span><a href="/blog/observer-pattern/"> <!-- -->Observer Pattern</a></div></nav><div><span class="tags__Tag-sc-16itk8x-0 dWWUBf"><a href="/tags/frontend">frontend</a></span><span class="tags__Tag-sc-16itk8x-0 dWWUBf"><a href="/tags/undefined">프론트엔드</a></span><span class="tags__Tag-sc-16itk8x-0 dWWUBf"><a href="/tags/http">HTTP</a></span><span class="tags__Tag-sc-16itk8x-0 dWWUBf"><a href="/tags/2024">2024</a></span></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/HTTP 1.1/";window.___webpackCompilationHash="daac8b44063f05022bc9";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-67be28bb616ee9d1905d.js"],"app":["/app-3d2f48e02718cf1ba6ee.js"],"component---src-pages-404-js":["/component---src-pages-404-js-733da19c2f05a711f3e7.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-8183acbe951eff5510c9.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6f87fb5470b2b19921cc.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-ccd4774fe81871c047bc.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-dee632d4bb0ebf0ed0a0.js"],"component---src-templates-tags-template-js":["/component---src-templates-tags-template-js-de7cdbe7fa441b3dff07.js"]};/*]]>*/</script><script src="/polyfill-67be28bb616ee9d1905d.js" nomodule=""></script><script src="/app-3d2f48e02718cf1ba6ee.js" async=""></script><script src="/532a2f07-b5460bda3aa85d8da5ee.js" async=""></script><script src="/framework-770f7cf4c0f9583c212f.js" async=""></script><script src="/webpack-runtime-6294bc65d5d58c65eb0e.js" async=""></script></body></html>

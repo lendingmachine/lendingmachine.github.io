@@ -1,6 +1,375 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Glass RSS Feed]]></title><description><![CDATA[A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.]]></description><link>https://www.lendingmachine.co.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 31 Jan 2024 01:10:57 GMT</lastBuildDate><item><title><![CDATA[Gatsby Starter Glass]]></title><description><![CDATA[렌딩머신 기술블로그 머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.]]></description><link>https://www.lendingmachine.co.kr/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/</guid><content:encoded>&lt;h1&gt;렌딩머신 기술블로그&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Glass RSS Feed]]></title><description><![CDATA[A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.]]></description><link>https://www.lendingmachine.co.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 31 Jan 2024 01:19:16 GMT</lastBuildDate><item><title><![CDATA[Gatsby Starter Glass]]></title><description><![CDATA[렌딩머신 기술블로그 머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.]]></description><link>https://www.lendingmachine.co.kr/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/</guid><content:encoded>&lt;h1&gt;렌딩머신 기술블로그&lt;/h1&gt;
   &lt;br&gt;
-&lt;p&gt;머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Observer Pattern]]></title><description><![CDATA[Observer Pattern  Problem…]]></description><link>https://www.lendingmachine.co.kr/blog/observer-pattern/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/observer-pattern/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Observer Pattern&lt;/h1&gt;
+&lt;p&gt;머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HTTP 구조에 대해]]></title><description><![CDATA[HTTP 클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다. 이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다. 1. HTTP 1.1 구조에 대해 1.1 request 구조 HTTP…]]></description><link>https://www.lendingmachine.co.kr/blog/HTTP 1.1/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/HTTP 1.1/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;HTTP&lt;/h1&gt;
+&lt;p&gt;클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다.&lt;/p&gt;
+&lt;p&gt;이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다.&lt;/p&gt;
+&lt;h1&gt;1. HTTP 1.1 구조에 대해&lt;/h1&gt;
+&lt;h2&gt;1.1 request 구조&lt;/h2&gt;
+&lt;p&gt;HTTP request는 크게 3가지로 나눠집니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;start line&lt;/li&gt;
+&lt;li&gt;headers&lt;/li&gt;
+&lt;li&gt;body&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;각각에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 454px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAENklEQVQ4y32Sa0xTZxzGn3MKRWihRaClhXIpvVBOz2lPLxR6sUUm62SahS1Dom4sTgjJEHRMwBWUONgX5xxmZBe3LNElS9TpzNCBG4hOtg+bBjYz4YPROS84XGQEMQP9Lwf9uj3JmyfvP3l/b573ffBomF85088ZBvfkCxMHLZazvUZu4pDF8kNfQdHtYzbT3yc50+wpzkN0BNfaSjPPN7iMg5scxtEGV96V7SWGX5q9uSdrBWlvvRMLpIPO83k05gGAEICVAHwALADCAHIAMAdj2bxaIVOPNrjclYVp4dXWtEi1oCneIGrdL7syXaE8VVlTILviepvfivkjoud+zZr4G12+1CO1Req/dgdSvm90qs+95lSNt3jUf3b5lfePO2y0twq33wykX2/3Z093BHVTsYD+t23F2ddaS7OmO4KZdzuDhqlYIBWLp/lCumkDXVrLEhGOb7SzRJ+ATq1j6MvnmLFaP7P4LW+89bED051BzHatwPzuMB68FcbNHX7M7AphKhaQLltyLA7bLVNHi+AW5DIpni5ZLsVHsSEZRJPoedEAOsfnV2VkSzAF9UXV1Fuhor6oivatUlFvRerMrpCChtfjbmeQwf1Bzrq/SQ9lIqsHEAHwFIDVAErwWMmfxwwueRyjHtrs9L7AZ0Re9eq8G0Wtf6OodW8P50QmW3z2sSYvxpu8DBaH7Ja5bzgE+KR4AEkA0gGkAlAC7BJxboAzSn5rR8DwRQ1nO7yesxyqLio88RJfcHSDXZhs8Rmutpbi61oBWPjObh37zIT/km8NQCN8PhCP8W1e/J+kP8DDYy7XZl1BUo2oKdriz9Y0+rMM28M5mY3+LN27z5o0V1pKFbNHBRv91Irf20r1/bVC0alXBGt/rVB4pk60nKsXzac3OawjdaLlQqPHBLooFkjx5HFMFcugXMYgJGMZgWUQjGOZEjnDKg7FDC51kmz52XrR6dApHU6d0mXXKrxOvdLpM6Rw0ozPVAglOSlmzB8W3Zd9lfEz3UHVhUaPkvaUKwc3OVRXW0uV481e1e32oGLhhLNwdL0P0x1B1T/dYc2jt8sy7u0MaaZiAe0f7X7tQndEu9gT0d/bGcrCwzN283y/ACIG9cV6+AwpKDOqUWFOxfEaAdXeNNDPztwyfRrovYoE+vCZdNq3Kp3efzptaX0QleCJ9E75UkexOMRbiVYvPSrLIMQyqGQZRBPimAxpFscyyq96ch2qRFnKSJ0oRIxqZ7WgMUUty+1lBWpbfbHePdnis1zc4sGvzcUMHg7zZvrRgRUOhXR+GQDVk9okvrFOahBk45+arWAhH2vyGnvXmLn9a822vZUm7sDzVtNHVVZx4nVfngS8tPUx0EEjfPzcAKekB/5lRFE5UUUC3fEtmxvgFDThTqRRwRzlUp9UIyajG1tkS365XkbUJSPqBNEB0N2t+BfwTnd8Q1W5jwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;HTTP구조&quot;
+        title=&quot;HTTP구조&quot;
+        src=&quot;/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png&quot;
+        srcset=&quot;/static/4ab09d3efaf3889686d750ab25c9c646/c26ae/HTTP%EA%B5%AC%EC%A1%B0.png 158w,
+/static/4ab09d3efaf3889686d750ab25c9c646/6bdcf/HTTP%EA%B5%AC%EC%A1%B0.png 315w,
+/static/4ab09d3efaf3889686d750ab25c9c646/b3c1d/HTTP%EA%B5%AC%EC%A1%B0.png 454w&quot;
+        sizes=&quot;(max-width: 454px) 100vw, 454px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;1.1.1 start Line&lt;/h3&gt;
+&lt;p&gt;말 그대로 HTTP request의 첫 라인을 의미합니다.
+또한 이 start line도 3부분으로 나눌 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP Method
+&lt;ul&gt;
+&lt;li&gt;해당 request가 의도한 action을 정의하는 부분.HTTP Methods에는 GET, POST, PUT, DELETE, OPTIONS 등등이 있다.주로 GET 과 POST과 쓰임.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Request target
+&lt;ul&gt;
+&lt;li&gt;해당 request가 전송되는 목표 uri.예를 들어 /login.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTP Version
+&lt;ul&gt;
+&lt;li&gt;말 그대로 사용되는 HTTP 버젼. 버젼에는 1.0, 1.1, 2.0 등이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.1.2 headers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;request에 대한 추가 정보를 담고 있는 부분입니다.&lt;/li&gt;
+&lt;li&gt;key : value 형태로 되어있습니다.&lt;/li&gt;
+&lt;li&gt;header도 크게 4가지 부분으로 나누게 됩니다.
+&lt;ul&gt;
+&lt;li&gt;General Header(공통 헤더)
+&lt;ul&gt;
+&lt;li&gt;요청과 응답 모두에 적용되지만 바디에서 최종적으로 전송되는 데이터와는 관련이 없는 헤더&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Date&quot;&gt;Date&lt;/a&gt; : 현재시간&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Pragma&quot;&gt;Pragma&lt;/a&gt; : 캐시제어 , HTTP/1.0에서 쓰던 것으로 HTTP/1.1에서는 Cache-Control이 쓰인다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cache-Control&quot;&gt;Cache-Control&lt;/a&gt; : 캐시를 제어할 때 사용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt;Upgrade&lt;/a&gt; : 프로토콜 변경시 사용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Via&quot;&gt;Via&lt;/a&gt; : 중계(프록시)서버의 이름, 버전, 호스트명&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Connection&quot;&gt;Connection&lt;/a&gt; : 네트워크 접속을 유지할지 말지 제어. HTTP/1.1은 kepp-alive 로 연결 유지하는게 default 값&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Transfer-Encoding&quot;&gt;Transfer-Encoding&lt;/a&gt; : 사용자에게 entity를 안전하게 전송하기 위해 사용하는 인코딩 형식을 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Entity Header(엔티티 헤더)
+&lt;ul&gt;
+&lt;li&gt;컨텐츠 길이나 MIME 타입과 같이 엔티티 바디에 대한 자세한 정보를 포함하는 헤더&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Type&quot;&gt;Content-type&lt;/a&gt; : 리소스의 media type 명시 ex) application/json, text/html&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Length&quot;&gt;Content-Length&lt;/a&gt; : 바이트 단위를 가지는 개체 본문의 크기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Language&quot;&gt;Content-language&lt;/a&gt; : 본문을 이해하는데 가장 적절한 언어&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Location&quot;&gt;Content-location&lt;/a&gt; : 반환된 데이터 개체의 실제 위치 ex) /index.html&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Disposition&quot;&gt;Content-disposition&lt;/a&gt; : 응답 메세지를 브라우저가 어떻게 처리할지. 주로 다운로드에 사용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Security-Policy&quot;&gt;Content-Security-Policy&lt;/a&gt; : 다른 외부 파일을 불러오는 경우 차단할 리소스와 불러올 리소스 명시
+&lt;ul&gt;
+&lt;li&gt;ex) default-src https -&gt; https로만 파일을 가져옴&lt;/li&gt;
+&lt;li&gt;ex) default-src ‘self’ -&gt; 자기 도메인에서만 가져옴&lt;/li&gt;
+&lt;li&gt;ex) default-src ‘none’ -&gt; 외부파일은 가져올 수 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Encoding&quot;&gt;Content-Encoding&lt;/a&gt; : 본문의 리소스 압축 방식. 주로 Content-Type과 같이 사용되며 참조되는 미디어 타입을 얻도록 디코드하는 방법을 클라이언트가 알게 해줍니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location&quot;&gt;Location&lt;/a&gt; : 301, 302 상태코드일 때만 볼 수 있는 헤더로 서버의 응답이 다른 곳에 있다고 알려주면서 해당 위치(URI)를 지정&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Last-Modified&quot;&gt;Last-Modified&lt;/a&gt; : 리소스의 마지막 수정 날짜&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Allow&quot;&gt;Allow&lt;/a&gt; : 지원되는 HTTP 요청 메소드 ex) GET, HEAD, POST&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers&quot;&gt;Expires&lt;/a&gt; : 자원의 만료 일자&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/ETag&quot;&gt;ETag&lt;/a&gt; : 리소스의 버전을 식별하는 고유한 문자열 검사기(주로 캐시 확인용으로 사용)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Request Header(요청 헤더)
+&lt;ul&gt;
+&lt;li&gt;HTTP 요청에서 사용되지만 메시지의 컨텐츠와 관련이 없는 패치될 리소스나 클라이언트 자체에 대한 자세한 정보를 포함하는 헤더&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Host&quot;&gt;Host&lt;/a&gt; : 요청하려는 서버 호스트 이름과 포트번호&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent&quot;&gt;User-agent&lt;/a&gt; : 클라이언트 프로그램 정보 ex) Mozilla/4.0, Windows NT5.1&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Referer&quot;&gt;Referer&lt;/a&gt; : 현재 페이지로 연결되는 링크가 있던 이전 웹 페이지의 주소&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept&quot;&gt;Accept&lt;/a&gt; : 클라이언트가 처리 가능한 MIME Type 종류 나열&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Charset&quot;&gt;Accept-charset&lt;/a&gt; : 클라이언트가 지원가능한 문자열 인코딩 방식&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Language&quot;&gt;Accept-language&lt;/a&gt; : 클라이언트가 지원가능한 언어 나열&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Accept-Encoding&quot;&gt;Accept-encoding&lt;/a&gt; : 클라이언트가 해석가능한 압축 방식 지정&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/If-Modified-Since&quot;&gt;If-Modified-Since&lt;/a&gt; : 여기에 쓰여진 시간 이후로 변경된 리소스 취득. 캐시가 만료되었을 때에만 데이터를 전송하는데 사용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Authorization&quot;&gt;Authorization&lt;/a&gt; : 인증 토큰을 서버로 보낼 때 쓰이는 헤더&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Origin&quot;&gt;Origin&lt;/a&gt; : 서버로 Post 요청을 보낼 때 요청이 어느 주소에서 시작되었는지 나타내는 값. 경로 정보는 포함하지 않고 서버 이름만 포함
+&lt;ul&gt;
+&lt;li&gt;이 값으로 요청을 보낸 주소와 받는 주소가 다르면 CORS 에러가 난다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cookie&quot;&gt;Cookie&lt;/a&gt; : 쿠기 값 key-value로 표현된다. Set-Cookie 헤더와 함께 서버로부터 이전에 전송됐던 저장된 HTTP 쿠키를 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Response Header(응답 헤더)
+&lt;ul&gt;
+&lt;li&gt;위치 또는 서버 자체에 대한 정보(이름, 버전)과 같이 응답에 대한 부가적인 정보를 갖는 헤더&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Server&quot;&gt;Server&lt;/a&gt; : 웹서버의 종류&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Age&quot;&gt;Age&lt;/a&gt; : max-age 시간내에서 얼마나 흘렀는지 초 단위로 알려주는 값&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy&quot;&gt;Referrer-policy&lt;/a&gt; : 서버 referrer 정책을 알려주는 값 ex) origin, no-referrer, unsafe-url&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate&quot;&gt;WWW-Authenticate&lt;/a&gt; : 사용자 인증이 필요한 자원을 요구할 시, 서버가 제공하는 인증 방식&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate&quot;&gt;Proxy-Authenticate&lt;/a&gt; : 요청한 서버가 프록시 서버인 경우 유저 인증을 위한 값&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Set-Cookie&quot;&gt;Set-Cookie&lt;/a&gt; : 서버측에서 클라이언트에게 세션 쿠키 정보를 설정 (RFC 2965에서 규정)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.1.3 body&lt;/h3&gt;
+&lt;p&gt;해당 reqeust의 실제 메세지 및 내용.&lt;/p&gt;
+&lt;p&gt;body가 없는 request도 많습니다.&lt;/p&gt;
+&lt;p&gt;예를 들어, GET request들은 대부분 body가 없는 경우가 많습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/041320846f5a79ac29847d29058c0695/a1dd2/body%EA%B5%AC%EC%A1%B0.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 34.177215189873415%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA5klEQVQoz62RS25DIQxFWWhW0a10DVHG7Ro6zaw7yPBBqwRjGx5wI0Oe8lGHtXQE/sC1wTEzRAQ5Zwgz+AGLq+rIvWJxFkEtguMp4/2LsD8SnPce58sFRIQQApZlueHhQxhxI6X0AA1BSoyWGR/fjN0h4u0zwplSKWUUqqmrQrJCmBDjz+jEclu3tlISdEzbVvSGWlY4K7iPOMdMicGJIETIPIUsvpG0oqwNvfdB6x0kFb8xw9XWcI4Rqyo0xvE+rOssNuHboWfaoLU7ZvYHzhwbeSRqfSoy+os/6X8K2T3ONv9lJnYFOwohYjAcGU8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;body구조&quot;
+        title=&quot;body구조&quot;
+        src=&quot;/static/041320846f5a79ac29847d29058c0695/f058b/body%EA%B5%AC%EC%A1%B0.png&quot;
+        srcset=&quot;/static/041320846f5a79ac29847d29058c0695/c26ae/body%EA%B5%AC%EC%A1%B0.png 158w,
+/static/041320846f5a79ac29847d29058c0695/6bdcf/body%EA%B5%AC%EC%A1%B0.png 315w,
+/static/041320846f5a79ac29847d29058c0695/f058b/body%EA%B5%AC%EC%A1%B0.png 630w,
+/static/041320846f5a79ac29847d29058c0695/a1dd2/body%EA%B5%AC%EC%A1%B0.png 838w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;1.2 response 구조&lt;/h2&gt;
+&lt;p&gt;request와 마찬가지로 크게 3부분으로 나뉩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Status line
+&lt;ul&gt;
+&lt;li&gt;response의 상태를 나타내며 크게 3부분으로 나뉩니다.&lt;/li&gt;
+&lt;li&gt;HTTP 버전&lt;/li&gt;
+&lt;li&gt;Status code: 응답 상태를 나타내는 코드. 숫자로 되어 있는 코드.예를 들어, 200&lt;/li&gt;
+&lt;li&gt;Status text: 응답 상태를 간략하게 설명해주는 부분.예를 들어, “Not Found”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Headers
+&lt;ul&gt;
+&lt;li&gt;Response의 headers와 동일하다.&lt;/li&gt;
+&lt;li&gt;다만 response에서만 사용되는 header 값들이 있다.&lt;/li&gt;
+&lt;li&gt;예를 들어, User-Agent 대신에 Server 헤더가 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;body
+&lt;ul&gt;
+&lt;li&gt;Response의 body와 일반적으로 동일하다.&lt;/li&gt;
+&lt;li&gt;Request와 마찬가지로 모든 response가 body가 있지는 않다. 데이터를 전송할 필요가 없을경우 body가 비어있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2. HTTP 1.1과 2.0의 차이점&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/10a8b056372885c4cf9561a001010ca5/31493/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6UlEQVQoz2WS2Y7TQBBF51v5EaSReOIPWAQ/wQMPLBJIkQAJkJ2RZiFS4mRiO7Hdm7u6eitod8bMwH2r7jqu27d8RkRN0wjOm7atm8Y617atUoomxRiJiHPedZ0QYrPZGGOGSUR0RkT75VIWBTkbx5GI/oeFEMfDYS77vv8LA0AkitZ6DWJorqsy+ED35LxHa2cYEe1UJlhKab0bIwqvTbSD4vkuj07dnIvVKlUh5GHGmBPMd1V/vQTFw3QEGv6BrRDs86cgeD4DAERMsNb6drsl68j5oNTYt1eb0jmfQEqk977e78dD65oGdzvyHo2xONk2xrRtS0Q6WhG0jnjgBzdPJgoxdnUtLy4IwNa1Xa+r6lKBOtlmt9vjVTFK5tFQTK7sPTjZRtQDi94rNfTb1Zevb5js7wLjLL3WuiClZsebaumcewBb2yk2ID9Cz7wqNz+4vFuVUsrHAAGFG5XXdbfPT5oFCNt+1yMbgBlvxKgA4ASPgByVdjrEkBMK4eGene9kwsIUfph0go/yp7FD3gwRLRaLqqryL5EDF7ASMO15+npZLouiOMHvLh+tu7fTXdrQ+fnjDx/f5wm5+9v6yffqaTIVUhavXr98/uJZgkP0nSo11vNkIZlBuG+b6RsGv+aGUctRyz/wb37MI+POVlBOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;HTTP버전차이&quot;
+        title=&quot;HTTP버전차이&quot;
+        src=&quot;/static/10a8b056372885c4cf9561a001010ca5/f058b/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png&quot;
+        srcset=&quot;/static/10a8b056372885c4cf9561a001010ca5/c26ae/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 158w,
+/static/10a8b056372885c4cf9561a001010ca5/6bdcf/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 315w,
+/static/10a8b056372885c4cf9561a001010ca5/f058b/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 630w,
+/static/10a8b056372885c4cf9561a001010ca5/31493/HTTP%EB%B2%84%EC%A0%84%EC%B0%A8%EC%9D%B4.png 664w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;2.1 HTTP 1.1의 특징(문제점)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Connection 한 개당 하나의 요청을 처리함 (비연결지향)
+&lt;ul&gt;
+&lt;li&gt;동시에 리소스를 받기가 안됩니다.&lt;/li&gt;
+&lt;li&gt;응답을 받은 뒤 연결을 끊어버립니다.&lt;/li&gt;
+&lt;li&gt;요청과 응답이 순차적으로 이루어집니다.&lt;/li&gt;
+&lt;li&gt;HTTP 문서 내에 포함된 다수의 리소스(image, css, script)를 처리하려면 요청할 리소스의 개수에 비례하여 Latency(대기시간)이 길어지게 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HOL(Head Of Line) Blocking이 발생할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;HOL이란 같은 큐에서 첫 번째 패킷에 의해 지연될 때 발생하는 성능 저하 현상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RTT(Round Trip Time) 증가
+&lt;ul&gt;
+&lt;li&gt;Connection 하나에 요청 한 개를 처리하는 특성으로 매 요청별로 connection을 만들게 되고 TCP상에서 동작하는 HTTP 특성 상 3-way handshake가 반복적으로 일어나 네트워크 지연을 초래합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;무거운 Header 구조 (무상태성)
+&lt;ul&gt;
+&lt;li&gt;매 요청마다 중복된 헤더값을 전송하게 됩니다.&lt;/li&gt;
+&lt;li&gt;서버 도메인에 관련된 쿠키 정보도 헤더에 포함되기 떄문에 크기가 증가합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2.2 HTTP 1.1 개선 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Image Spriting&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;웹페이지를 구성하는 다양한 아이콘 이미지 파일 요청 횟수를 줄이기 위해 아이콘을 하나의 큰 이미지로 만든 뒤 css로 좌표를 지정하여 표시하는 방법입니다.&lt;/li&gt;
+&lt;li&gt;아래의 이미지에서 css로 하나의 아이콘만 선택해서 보여줄 수 있기 때문에 Icon을 여러 번 요청할 필요가 없어집니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 430px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQY0wExAc7+AObr8PHy9/Dd5/fq8Ozj6PTs7PLm4+3w8uHq7uze4e7e4PDp3vLx68/f4+fy9Nbn5+zz9eHo7PDk5evb2gBHfsVsYLb/L5/8SaP7mMrrcHvmZUR7lq5Yq9nUR3n1Slj/sSrBwWRV3f8r2es/7eZEutRtqNHaanL/X10AMWGgU0mV2xR60zGCzXWhw1hivEouYHaMQ4qyrS5byTE+3o4XnZ5ON7DQHbPCIb65LpatTIKntlBX3kRCADw8PTg4OEJAQTs6O0JBQjo6Oj49PDo6Ozw+P0E9PkA9P0BAPTs6OkRISjo7O0JGRjo6Oj9BQj89PURBQQA5OTg2NzY3Ozg2ODc6Ozo3OTk3OTo4ODg7Ojo5PDs5PDs5Ojw4ODlAPT06ODg9Ozs4NzY6OTk4Ojo6PDzTF5PQ+uW2zQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;이미지스플리팅&quot;
+        title=&quot;이미지스플리팅&quot;
+        src=&quot;/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png&quot;
+        srcset=&quot;/static/ed9623b17cb80fd6ab59700940fec8c0/c26ae/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 158w,
+/static/ed9623b17cb80fd6ab59700940fec8c0/6bdcf/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 315w,
+/static/ed9623b17cb80fd6ab59700940fec8c0/05ed2/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85.png 430w&quot;
+        sizes=&quot;(max-width: 430px) 100vw, 430px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Domain Sharding&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;브라우저 1.1의 단점을 극복하기 위해 여러 개의 Connection을 생성하여 병렬로 요청을 보내는 방법입니다.&lt;/li&gt;
+&lt;li&gt;단 브라우저 별로 Connection 개수 제한이 존재하므로 근본적인 해결은 힘듭니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Minified CSS/Javascript&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;HTTP를 통해 전송되는 데이터 용량을 줄이기 위해 CSS, JavsScript를 축소합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Load Faster&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Head 태그에 자바스크립트를 삽입 후 async나 defer 옵션을 통해 브라우저의 파싱을 멈추지 않고 로드 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data URL Scheme&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;HTML 문서 내 이미지 리소르를 Base64로 인코딩된 이미지 데이터로 직접 기술하는 방식으로 서버의 요청을 줄일 수 있습니다.&lt;/li&gt;
+&lt;li&gt;단 해당 방법의 단점으로
+&lt;ol&gt;
+&lt;li&gt;원본 파일보다 용량이 커지고&lt;/li&gt;
+&lt;li&gt;문자열이 길어지므로 코드 가독성이 떨어지고&lt;/li&gt;
+&lt;li&gt;브라우저에 문자 길이 제한이 있어서 용량이 큰 이미지는 처리가 불가능합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;data:image/png;base64,iVBORw0KGgoAAA
+ANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU
+5ErkJggg==&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Red dot&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구글의 SPDY&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;하지만 위의 방법으로는 근본적인 해결 방법이 아니기 때문에 구글이 더 빠른 웹을 만들기 위해 만든 프로토콜입니다.&lt;/li&gt;
+&lt;li&gt;SPDY는 압축, 다중화, 우선 순위 설정을 통한 레이턴시 감소를 달성합니다.&lt;/li&gt;
+&lt;li&gt;단 HTTP를 대체하는 프로토콜은 아니고 HTTP를 통한 전송을 재정의 합니다.&lt;/li&gt;
+&lt;li&gt;이는 HTTP 2.0 초안의 참고 규격이 됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;3. HTTP 2.0&lt;/h1&gt;
+&lt;p&gt;HTTP 2.0은 HTTP1.1을 완전하게 재작성하지 않고 프로토콜 성능에 초점을 맞춰 수정한 버전입니다.&lt;/p&gt;
+&lt;p&gt;특히 사용자가 느끼는 레이턴시, 네트워크, 서버 리소스 사용량 등 성능에 초점을 맞춰 개선되었습니다.&lt;/p&gt;
+&lt;h2&gt;3.1 특징&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiplexed Streams: connection
+&lt;ul&gt;
+&lt;li&gt;한 개로 동시에 여러 개의 메시지를 주고 받을 수 있으며, 응답은 순서에 상관없이 stream으로 주고 받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stream Prioritization
+&lt;ul&gt;
+&lt;li&gt;리소스 간의 의존관계에 따른 우선순위를 설정하여 문제를 해결합니다.&lt;/li&gt;
+&lt;li&gt;예를 들어 요청한 HTML에 css1개 image 2개가 존재할 때 이미지 파일보다 CSS파일이 늦게 수신되면 렌더링에 문제가 생기므로 순서를 조절합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server Push
+&lt;ul&gt;
+&lt;li&gt;HTML 문서 상에서 필요한 리소스를 클라이언트 요청 없이 보낼 수 있다.&lt;/li&gt;
+&lt;li&gt;즉 이전에는 HTML 파일 받고 분석 → 필요한 파일 재요청 이었지만&lt;/li&gt;
+&lt;li&gt;이를 Server Push 기법을 통해 재요청 없이 서버에서 push를 해서 클라이언트가 받을 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Header Compression
+&lt;ul&gt;
+&lt;li&gt;클라이언트가 요청을 여러번 보낼 시 헤더 중복된 부분을 검출해서 중복되지 않는 부분만 보냅니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Observer Pattern]]></title><description><![CDATA[Observer Pattern  Problem…]]></description><link>https://www.lendingmachine.co.kr/blog/observer-pattern/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/observer-pattern/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Observer Pattern&lt;/h1&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -203,4 +572,299 @@
 &lt;strong&gt;newsPublisher.removeObserver(newsSubscriber1)&lt;/strong&gt; 이후에는 구독자 2만이 수신받게 됩니다.&lt;br&gt;
 코드상에서 &lt;strong&gt;NewsSubscriber&lt;/strong&gt; 는 생성시 구독정보만 주입할 뿐 어떠한 행위를 하지 않았습니다.&lt;/p&gt;
 &lt;h2&gt;Applicability&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;옵서버 패턴은 한 객체의 상태가 변경되어 다른 객체들을 변경해야 할 필요성이 생겼을 때, 그리고 실제 객체 집합들을 미리 알 수 없거나 이러한 집합들이 동적으로 변경될 때 사용하기에 적합한 패턴입니다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;옵서버 패턴은 한 객체의 상태가 변경되어 다른 객체들을 변경해야 할 필요성이 생겼을 때, 그리고 실제 객체 집합들을 미리 알 수 없거나 이러한 집합들이 동적으로 변경될 때 사용하기에 적합한 패턴입니다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[마이크로 프론트엔드]]></title><description><![CDATA[1. 마이크로 서비스란? 일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다. 데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.…]]></description><link>https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;1. 마이크로 서비스란?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다.&lt;/li&gt;
+&lt;li&gt;데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2 마이크로 프론트엔드란&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;기존 웹페이지는 기능이 많지 않고 단순했기 때문에 하나의 레포지티에서 관리를 했는데 이를 모놀리식라 합니다.&lt;/li&gt;
+&lt;li&gt;하지만 점차 시간이 지날수록 웹의 기능이 많아지기 시작했고 프론트엔드 영역이 많아지고 복잡해져서 유지보수가 어려워지기 시작했습니다. 그렇기 때문에 이를 효율적으로 다뤄야 할 필요가 생겼습니다.&lt;/li&gt;
+&lt;li&gt;프론트엔드에 마이크로 서비스의 개념을 도입하여 전체 화면을 작동할 수 있는 단위로 나누어 개발한 후 서로 조립하는 방식을 접목시켰습니다.&lt;/li&gt;
+&lt;li&gt;방법은 크게 멀티레포, 모노레포로 나뉩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;3. 모놀리식이란?&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 558px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsTAAALEwEAmpwYAAADH0lEQVQ4y4VUa5OaSBT1//+W/bCbymQquzNjxigCOtANCHQ3D3mDoshDhDjKBnAtM5lkb52ibp+uw2kufe+guYnz+dw0TZJuLc/wIttbtXBDy/GXr6+vzU8xuF2czqemaXQXqSE3Q6O70R+P7Ee8gsCY7st9//Y+3oqvbJysTY8YLlYNiViKFeimpx2Px18697KqqpLdNsvSLEvzPCv2eV7kbZ6luzTpkaTbNEtPp/MPzn7ozReUYLBAo6HOAI3u0eUM1C8AhFZd3vS10+k86GwbRVsw8jPQp0CnfwVeo4Ulq61EyZorLp9m6aA5N6ZHUAisRDU3ynJ7gbmRzY18XS63ipWoKACSNVc9ILtcvF0PyrJUHM4vNCfFTortHeoTNyNuRm5Je4f8Qlc8ntemqg968V51gRnLvEaLy5lgsoLJQoORXQ4HEBpMT0KDATqNAkgi4QVN0FWMPIhDYQIfh7P7+9GfT+wnRn7mCAV0eo7GD/Td58mHB/puKg4Fk0U+4DCFfnDeyByhXvCEVUccpnhtqng8DgWOUHM0nilfu10Kh50zvjof9orDuzlxU+LlLW6/1s06Jr8wXk5wAH8SZ8RKkL1Ddvfsy3OFlahWoto75GbviZ0Ua5Gorxct4gUOBXMjW4lKItHoyfWChELLhN2xAxhvVpeCaSuRXnxh5NEEPk7FIU+ovs4veEJLXybCEyUOWXkkWXMUQKC3tyXL08G+F0fiGDw8sZdqz9Qx1Ns/NxWH/0w//j358MTeT8WhtJzhEI7hIzbl5twMquqg2LydtifU11KLWMIhbI+9U0kkXMh1S1qJwhN66Zh9U7Z3O4oDxQbIg7dQHF5xeNUFHSByIfKhagvxdn3twktjVFV9+C+q6lDXVV3X3+pvdRdVVR0Oh7Is67q+Kq/i822LH4/HTRJHmyCK/SgO1tuoPOzfjKp3xlC32UgYsuqIJxSvURxpQYHn3vN3M6xpmtfjSfdUJ0fLrfJ58pdgMsHBkG2uqqr/FzdN44RL4kvYF4HGKDbQIxlbi9/NsDcDuCzLosj3ZVHsi6Iojsd35u538b/UXQ8V2CyV3wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;모놀리식이란?&quot;
+        title=&quot;모놀리식이란?&quot;
+        src=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
+        srcset=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/c26ae/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 158w,
+/static/e514013b03104b37fd097ab6cd9ec6c6/6bdcf/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 315w,
+/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 558w&quot;
+        sizes=&quot;(max-width: 558px) 100vw, 558px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;단순성 : 모든 코드가 단일 코드 베이스이기 때문에 로컬에서 실행 시 단일 애플리케이션만 실행하면 됩니다.&lt;/li&gt;
+&lt;li&gt;간편한 배포 : 단일 프로젝트를 배포하면 되기 때문에 간편합니다.&lt;/li&gt;
+&lt;li&gt;디버깅과 테스트가 쉬움 : 모든 코드가 단일 프로젝트에 있기 때문에 디버깅 및 테스트가 쉬움&lt;/li&gt;
+&lt;li&gt;쉬운 모니터링 : 코드가 단일 프로젝트에 존재하기 때문에 오류가 발생한 위치를 찾기 쉽습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;유지 보수의 어려움 : 프로그램 규모가 커질수록 유지보수가 힘들어집니다.&lt;/li&gt;
+&lt;li&gt;유연하지 않는 확장성 : 모놀리식도 확장은 가능하지만 특정 단위로 확장은 불가능하고 전체 프로젝트 단위로 확장해야 합니다.&lt;/li&gt;
+&lt;li&gt;대규모 팀 작업이 어려움 : 모든 팀이 동일한 코드, 동일한 프로젝트에서 작업하기 때문에 코드의 충돌 가능성이 높고 이에 따른 다른 개발자의 작업에 영향을 줄 수 있습니다.&lt;/li&gt;
+&lt;li&gt;기술 사용 제한 : 기존 프로젝트를 다른 기술로 변환하기 어렵기 때문에 일반적으로 프로젝트를 구성하면 오랫동안 동일한 기술을 사용합니다.&lt;/li&gt;
+&lt;li&gt;느린 배포 속도 : 하나의 레포지티에서 배포하므로 속도가 느려집니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그렇다면 언제 모놀리식을 사용할까요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;규모가 작은 애플리케이션의 경우&lt;/li&gt;
+&lt;li&gt;현 비즈니스를 성장할 계획이 없거나, 복잡한 시스템이 없고 관리가 필요하지 않을 경우&lt;/li&gt;
+&lt;li&gt;아직 아이디어 구상 단계일 경우&lt;/li&gt;
+&lt;li&gt;팀의 규모가 작거나 신생 팀일 경우와 새로운 도메인을 시작할 때&lt;/li&gt;
+&lt;li&gt;**MVP(최소 기능 제품)**일 경우는 모놀리식이 피드백을 빠르게 수정이 가능합니다.&lt;/li&gt;
+&lt;li&gt;주된 작업이 CRUD일 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;4. 모놀리식에서 마이크로서비스, 마이크로 프론트엔드 까지&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;마이크로서비스는 애플리케이션을 도메인을 기준으로 모놀리식한 백엔드의 서비스를 분리하는 것을 의미합니다. 마이크로 프론트엔드는 이 개념을 프론트엔드 세계로 확장한 것입니다.&lt;/li&gt;
+&lt;li&gt;마이크로프론트엔드는 웹 어플리케이션을 서로 다른 모듈 및 개별 기능으로 분할하고 조합하는 아키텍처이며 백엔드의 마이크로 서비스의 이점인 유연성과 보다 높은 개발 생산성을 가집니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.30379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQoz52QyytEYRjGbf0DNoqNW8TKRjYsLC2sKISaiLW1f0FRbjXlkmtEojAzxwzHXI7LSBkzaVyanHHOGM3nXGa+73zf9+qYRLLh6V28Pe/7exZPAfxLnHMAKODflPc/5vOJMW4RYBQ+roQQWZYVVaWU2vCPyHhSjTzKkYScyWIAeMpo7uCZFLnVKQfO4tEbr9t1LHieHu5s+DGpxBJyNJF8SafjBq89Nsu9RpFL67vKPWOo8+MKn1ksmD3XFEhufHNvavtgbGN3csdjw01+rUJAlQJqDWkxnTcESX2AVIl4KGIls6zW+1Zz+FbqQr1hU6fQca53nma6TlF32LDhRsmqPsGVIm45s+5N3n5JWs9JcwiPxDnW0MTCyszy+qhzfmvfTSmdXV13Lq1Nzy2ubO3YMLIgRUDBYHGI6rzsKFfiyxW6sm1h8mxavQGlX0o5Qsrw5atBeV9QHZRSAyHVIaW+Csv3m2VcfGXeNBPSLKozg4KIQMyAH8GFZqfn9wCCIIJf2v6T3gEu89YMOOqGKgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;웹 아키텍쳐&quot;
+        title=&quot;웹 아키텍쳐&quot;
+        src=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
+        srcset=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/c26ae/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 158w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/6bdcf/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 315w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 630w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/40601/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 945w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/78612/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1260w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1386w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;5. 멀티레포 vs 모노레포&lt;/h1&gt;
+&lt;p&gt;마이크로프론트엔드를 구현하는 구조에는 멀티레포와 모노레포가 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByklEQVQoz3WSWW7cMAxA5/4/PUYv0Os0aJPY47FkWbvETSzkadL8lBAgQuLyuNxUtXew7jxDDDExi4GGzD7EkNJx+pprZIwIMabDex+j80FEVPWmqrnWt3VbH/vDWCJ+bakT3nezGft7vZ/OW2ymV2OPt/t9M3bZHsw8nUWERYaqjCFjELOINABARCaRMRUiEZExVHXovIhYx7gRUQVAog7TqPX+tpuQ88uy/Vrvy25SKfOHedmPn+/rdjifcoOuQ29IBET6IR1ARGrrqZZU5gk5I824Ief5WGuqdTrr5Yw0YXcXVBUQNutiKe+7XYw155lrRZqZH+5cdmu9DyU3gDHGDRBV9fVhv33/MSkQG0Bp7YzJpzyzfWCHkl2MqZTSWwf4i03MpbXXbWcRQPBpsu3ufBzOeh9Ledrsp1/NYX0IudT+BRuJcm1jDEA4fEi1rvZ4HO7Sy4VNxoftcC6EWL44P8k/G4bEudarPTWVGnOGmZl8TtaHmHNutT2xibkBEDMxXwODZbcxl5d1+7Vui7lGRchXw1Z7uBBn5tkwvY0xWCSWejcHXiF0jM9akBAQ+VokGSOVujvPIvTcsCcti3T4B/8/Ieb+pcY/hEHuD4bkv/EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;멀티모노레포&quot;
+        title=&quot;멀티모노레포&quot;
+        src=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/c26ae/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/6bdcf/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 691w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;5.1 멀티레포&lt;/h2&gt;
+&lt;p&gt;레포지티를 여러개로 나눠서 관리하는 방법&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABH0lEQVQoz5VSy2qFUAxUfFxfR8UnKuIDN6Io4s694Nr//4X+gimT1raL29K7GBLCyWQmOZIkSSTLMiF6nkfDMFDTNKQoCtf+ieszvklITNMk27bJMAxKkoSiKCLf98l1XdI07XVCkK3rSud5sjLLsnhIlmWc442u6wwMgBMME0LwYCHEhZqmaR+EjuPQNE20bRuVZUl1XTNg/fF4MCEiCFVVZRdpmjKqqsLgC+8dx/km7LqOlmXhRigG0AgS7Bhqi6JgdVCGeKt/anmeZzqOgwnRAIAEhFhDHMdMEgQBxxtPCdHc9z2N48gWIL9tW7YMQrxBfd93znE07PDXo0A6FOIoP68XhiEfBzmWjyHI74P8eWXsC3byPP/aF2qvfpt3DiDNMzJ4P40AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;멀티레포&quot;
+        title=&quot;멀티레포&quot;
+        src=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/c26ae/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 158w,
+/static/05e81c28237ad5a2428ee4cb03c78359/6bdcf/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 315w,
+/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 630w,
+/static/05e81c28237ad5a2428ee4cb03c78359/40601/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 945w,
+/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 996w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;레포지티 별 담당자를 지정
+&lt;ul&gt;
+&lt;li&gt;수월한 패키지 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;레포지티의 빠른 CI Build
+&lt;ul&gt;
+&lt;li&gt;기능을 레포지티 별로 나눠서 개발 하므로 레포지티 크기가 작아짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;패키지의 명확한 분리로 인한 유연성 향상
+&lt;ul&gt;
+&lt;li&gt;레포지티 상 서로 연계 관계가 없기 때문에 추가, 수정, 유지 관리 편리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;중복된 설정 및 반복된 설치
+&lt;ul&gt;
+&lt;li&gt;모든 공통된 설정과 모듈들을 반복적으로 설정/설치해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;코드 재사용이 쉽지 않으므로 중복 코드 가능성이 높아짐
+&lt;ul&gt;
+&lt;li&gt;다른 레포지티 코드를 사용하기 위해서 추가 작업이 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;이슈의 분산
+&lt;ul&gt;
+&lt;li&gt;각 다른 레포지토리가 연관되어있는 이슈 트래킹 관리 어려움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;디펜던시 헬
+&lt;ul&gt;
+&lt;li&gt;프로젝트가 커지면 많은 레포지티가 생기고 그에 따른 다양한 의존관계가 생겨서 복잡해짐&lt;/li&gt;
+&lt;li&gt;여러 패키지들이 사용하는 같은 모듈에서 버전 차이 발생 및 충돌 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5.2 모노레포&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6ElEQVQoz42Ry26GIBSEuQQBhQNo0AJx4cKY+Bou2Pr+T9MU/pC/tkn7rbhkzgwDQghhjBFCnPOtIKVshw38g9cFpRQAuq5zznnvrbV1i/4Dxnjbtvu+Qwh93yulUkpKqRqnKzjn6lBrrSkQQr7EhJAQwnEcnPM6bhzHdzFjzHu/LMs8zzHGlFKMkVL6EqeUcs4A8BB/FJqbEOIZmxASYzzPs1b1LvbeT9MEAK4wDEMr75v4ui6tdRPXFPu+55wRQiGEluvpvK6rlLI6GGNaYUIIY0xd/N4/pVRrXR8GAMYYrTVj7M9/+gRr2xS8azeeNQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;모노레포&quot;
+        title=&quot;모노레포&quot;
+        src=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/c26ae/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/6bdcf/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/40601/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 945w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 996w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;레포지티 하나에서 나눠서 관리하는 방법(멀티레포의 장점은 단점으로 단점은 장점으로 변한다.)
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;공통 항목 단일화
+&lt;ul&gt;
+&lt;li&gt;eslint, Build, Unit Test 등 공통된 설정 및 필요한 node module을 한 번의 설치와 한 번의 설정으로 모든 패키지가 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;쉬운 코드 공유&lt;/li&gt;
+&lt;li&gt;단일 이슈 트래킹
+&lt;ul&gt;
+&lt;li&gt;모노레포 내 연관된 패키지들에 관한 (분산될 필요 없는) 이슈 트래킹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;효율적인 의존성 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;Repository의 거대화
+&lt;ul&gt;
+&lt;li&gt;분산되어 있던 모든 리소스를 하나의 레포로 합치면서 생기는 문제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;느린 CI Build
+&lt;ul&gt;
+&lt;li&gt;CI가 하나로 구성된다는 장점 == 규모가 커짐에 따라 분산된 CI 빌드보다 속도가 느릴 수밖에 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;무분별한 의존성
+&lt;ul&gt;
+&lt;li&gt;Package 간 의존성 관리가 쉽지만, 오히려 과도한 의존성 관계 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
