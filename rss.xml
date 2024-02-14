@@ -1,6 +1,439 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Glass RSS Feed]]></title><description><![CDATA[A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.]]></description><link>https://www.lendingmachine.co.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Feb 2024 05:42:25 GMT</lastBuildDate><item><title><![CDATA[Gatsby Starter Glass]]></title><description><![CDATA[렌딩머신 기술블로그 머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.]]></description><link>https://www.lendingmachine.co.kr/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/</guid><content:encoded>&lt;h1&gt;렌딩머신 기술블로그&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Glass RSS Feed]]></title><description><![CDATA[A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.]]></description><link>https://www.lendingmachine.co.kr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Feb 2024 06:41:30 GMT</lastBuildDate><item><title><![CDATA[Gatsby Starter Glass]]></title><description><![CDATA[렌딩머신 기술블로그 머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.]]></description><link>https://www.lendingmachine.co.kr/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/</guid><content:encoded>&lt;h1&gt;렌딩머신 기술블로그&lt;/h1&gt;
   &lt;br&gt;
-&lt;p&gt;머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 9]]></title><description><![CDATA[리팩토링 분류 코드를 상태/전략 패턴로 치환 As-Is 상태패턴 
+&lt;p&gt;머니무브를 개발하면서 다양한 기술적 문제를 정리하는 블로그입니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Clean-Code Chapter12]]></title><description><![CDATA[…]]></description><link>https://www.lendingmachine.co.kr/blog/clean-code-chapter-12/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/clean-code-chapter-12/</guid><pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;창발성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;창발성이란 &lt;strong&gt;단순한 결합이 복잡한 결과를 나타내는 것&lt;/strong&gt;을 의미한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;하위 계층에는 없는 특성이나 행동이 상위 계층(전체 구조)에서 자발적으로 돌연히 나타는 현상&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;창발적 설계란 어떤 규칙과 원칙에 따라 설계를 하게 되면, 그것들이 모여 아주 좋은 거시적 설계가 된다고 보면 될 것같다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;창발적 설계로 깔끔한 코드를 구현하자&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;착실하게 따르기만 하면 우수한 설계가 나오는 간단한 규칙 네 가지가 있다면?&lt;/li&gt;
+&lt;li&gt;네 가지 규칙을 따르면 코드 구조와 설계를 파악하기 쉬워진다면?&lt;/li&gt;
+&lt;li&gt;그래서 &lt;a href=&quot;https://yoongrammer.tistory.com/96&quot;&gt;SRP&lt;/a&gt; 나 &lt;a href=&quot;https://huisam.tistory.com/entry/DIP&quot;&gt;DIP&lt;/a&gt; 와 같은 원칙을 적용하기 쉬워진다면?&lt;/li&gt;
+&lt;li&gt;네 가지 규칙이 우수한 설계의 창발성을 촉진한다면?&lt;/li&gt;
+&lt;li&gt;켄트 벡은 다음 규칙을 따르면 설계는 ‘단순하다’ 고 말한다.
+&lt;ul&gt;
+&lt;li&gt;모든 테스트를 실행한다.&lt;/li&gt;
+&lt;li&gt;중복을 없앤다.&lt;/li&gt;
+&lt;li&gt;프로그래머 의도를 표현한다.&lt;/li&gt;
+&lt;li&gt;클래스와 메서드 수를 최소로 줄인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;단순한 설계 규칙 1: 모든 테스트를 실행하라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;테스트를 철저히 거쳐 모든 테스트 케이스를 항상 통과하는 시스템은 ‘테스트가 가능한 시스템’ 이다.&lt;/li&gt;
+&lt;li&gt;당연하지만 중요한 말이다. 테스트가 불가능한 시스템은 검증도 불가능하다.&lt;/li&gt;
+&lt;li&gt;테스트가 가능한 시스템을 만들려고 애쓰면 설계 품질이 더불어 높아진다.
+&lt;ul&gt;
+&lt;li&gt;크기가 작고 목적 하나만 수행하는 클래스가 나온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;철저한 테스트가 가능한 시스템을 만들면 더 나은 설계가 얻어진다.&lt;/li&gt;
+&lt;li&gt;결합도가 높으면 테스트 케이스를 작성하기 어렵다.&lt;/li&gt;
+&lt;li&gt;아래와 같은 방법을 따르면 결합도를 낮추며 설계 품질은 높아진다.
+&lt;ul&gt;
+&lt;li&gt;DIP와 같은 원칙을 적용&lt;/li&gt;
+&lt;li&gt;의존성 주입(Dependency Injection)&lt;/li&gt;
+&lt;li&gt;인터페이스&lt;/li&gt;
+&lt;li&gt;추상화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;단순한 설계 규칙 2~4: 리팩터링&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;테스트 케이스를 모두 작성했다면 &lt;strong&gt;점진적으로&lt;/strong&gt; 리팩토링 해나간다.&lt;/li&gt;
+&lt;li&gt;코드를 정리하면서 시스템이 깨질까 걱정할 필요가 없다. 테스트 케이스가 있으니까!&lt;/li&gt;
+&lt;li&gt;리팩토링 단계에서는 응집도를 높이고, 결합도를 낮추고, 관심사를 분리하고, 시스템 관심사를 모듈로 나누고,&lt;/li&gt;
+&lt;li&gt;함수와 클래스 크기를 줄이고, 더 나은 이름을 선택하는 다양한 기법들이 동원된다.&lt;/li&gt;
+&lt;li&gt;또한 단순한 설계 규칙 중 나머지 3개를 적용하는 단계이기도 하다.
+&lt;ul&gt;
+&lt;li&gt;중복 제거&lt;/li&gt;
+&lt;li&gt;프로그래머 의도 표현&lt;/li&gt;
+&lt;li&gt;클래스 메서드 수 줄이기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;중복을 없애라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;우수한 설계에서 중복은 커다란 적이다. 중복은 추가 작업, 추가 위험, 불필요한 복잡도를 뜻하기 때문이다.&lt;/li&gt;
+&lt;li&gt;같은 코드는 당연히 중복이다. 비슷한 코드는 더 비슷하게 고쳐주면 리팩터링이 쉬워진다.&lt;/li&gt;
+&lt;li&gt;깔끔한 시스템을 만들려면 단 몇 줄이라도 중복을 제거하겠다는 의지가 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  // 각 메서드를 따로 구현하는 방법도 있다. 하지만 size()가 개수를 반환하는 로직이다.
+  int size() {}
+  boolean isEmpty{}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;   // isEmpty는 이를 이용하면 코드를 중복해서 구현할 필요가 없어진다.
+   boolean isEmpty() {
+      return 0 == size();
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 1-1, 중복 제거 전
+    public void scaleToOneDimension(float desiredDimension, float imageDimension) {
+      if (Math.abs(desiredDimension - imageDimension) &amp;lt; errorThreshold)
+        return;
+      float scalingFactor = desiredDimension / imageDimension;
+      scalingFactor = (float)(Math.floor(scalingFactor * 100) * 0.01f);
+      
+      RenderedOpnewImage = ImageUtilities.getScaledImage(image, scalingFactor, scalingFactor);
+      image.dispose();
+      System.gc();
+      image = newImage;
+    }
+    
+    public synchronized void rotate(int degrees) {
+      RenderedOpnewImage = ImageUtilities.getRotatedImage(image, degrees);
+      image.dispose();
+      System.gc();
+      image = newImage;
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;scaleToOneDimension 메서드와 rotate 메서드를 살펴보면 일부 코드가 동일하다. 다음과 같이 코드를 정리해 중복을 제거한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 1-2, 중복 제거 후
+    public void scaleToOneDimension(float desiredDimension, float imageDimension) {
+      if (Math.abs(desiredDimension - imageDimension) &amp;lt; errorThreshold)
+        return;
+      float scalingFactor = desiredDimension / imageDimension;
+      scalingFactor = (float) Math.floor(scalingFactor * 10) * 0.01f);
+      replaceImage(ImageUtilities.getScaledImage(image, scalingFactor, scalingFactor));
+    }
+    
+    public synchronized void rotate(int degrees) {
+      replaceImage(ImageUtilities.getRotatedImage(image, degrees));
+    }
+    
+    private void replaceImage(RenderedOpnewImage) {
+      image.dispose();
+      System.gc();
+      image = newImage;
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;이런 ‘소규모 재사용’은 시스템 복잡도를 극적으로 줄여준다.&lt;/li&gt;
+&lt;li&gt;소규모 재사용을 제대로 익혀야 대규모 재사용이 가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html&quot;&gt;TEMPLATE METHOD 패턴&lt;/a&gt;은 고차원 중복을 제거할 목적으로 자주 사용하는 기법이다. 예를 살펴보자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 2-1, 최소 법정 일수를 계산하는 코드만 제외하면 두 메서드는 거의 동일하다. 
+    public class VacationPolicy {
+      public void accrueUSDDivisionVacation() {
+        // 지금까지 근무한 시간을 바탕으로 휴가 일수를 계산하는 코드
+        // ...
+        // 휴가 일수가 미국 최소 법정 일수를 만족하는지 확인하는 코드
+        // ...
+        // 휴가 일수를 급여 대장에 적용하는 코드
+        // ...
+      }
+    
+      public void accrueEUDivisionVacation() {
+        // 지금까지 근무한 시간을 바탕으로 휴가 일수를 계산하는 코드
+        // ...
+        // 휴가 일수가 유럽연합 최소 법정 일수를 만족하는지 확인하는 코드
+        // ...
+        // 휴가 일수를 급여 대장에 적용하는 코드
+        // ...
+      }
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 2-2, 템플릿 메서드 적용 
+    abstract public class VacationPolicy {
+      public void accrueVacation() {
+        caculateBseVacationHours();
+        alterForLegalMinimums();
+        applyToPayroll();
+      }
+    
+      private void calculateBaseVacationHours() { /* ... */ };
+      abstract protected void alterForLegalMinimums();
+      private void applyToPayroll() { /* ... */ };
+    }
+    
+    public class USVacationPolicy extends VacationPolicy {
+      @Override protected void alterForLegalMinimums() {
+        // 미국 최소 법정 일수를 사용한다.
+      }
+    }
+    
+    public class EUVacationPolicy extends VacationPolicy {
+      @Override protected void alterForLegalMinimums() {
+        // 유럽연합 최소 법정 일수를 사용한다.
+      }
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;표현하라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;소프트웨어 프로젝트 비용 중 대다수는 장기적인 유지보수에 들어간다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;시스템이 점차 복잡해지면서 유지보수 개발자가 시스템을 이해하느라 보내는 시간은 점점 늘어나고 동시에 코드를 오해할 가능성도 점점 커진다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;그러므로 코드는 &lt;strong&gt;개발자의 의도를 분명히 표현&lt;/strong&gt;해야 한다.&lt;/li&gt;
+&lt;li&gt;개발자가 코드를 명백하게 짤수록 다른 사람이 그 코드를 이해하기 쉬워진다.&lt;/li&gt;
+&lt;li&gt;그래야 결함이 줄어들고 유지보수 비용이 적게 든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;좋은 이름을 선택&lt;/strong&gt;한다. 이름과 기능이 완전히 딴판인 클래스나 함수로 개발자를 놀라게 해서는 안 된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;함수와 클래스 크기를 가능한 한 줄인다.&lt;/strong&gt; 작은 클래스와 작은 함수는 이름 짓기도 쉽고, 구현하기도 쉽고, 이해하기도 쉽다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;표준 명칭&lt;/strong&gt;을 사용한다. 예를 들어, 디자인 패턴은 의사소통과 표현력 강화가 주요 목적이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;단위 테스트 케이스를 꼼꼼히 작성&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;li&gt;표현력을 높이는 가장 중요한 방법은 노력이다.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;나중에 읽을 사람을 고려&lt;/strong&gt;해 조금이라도 읽기 쉽게 만드려는 충분한 고민은 거의 찾기 어렵다.&lt;/li&gt;
+&lt;li&gt;하지만 나중에 코드를 읽을 사람은 바로 자신일 가능성이 높다는 사실을 명심하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그러므로 자신의 작품을 조금 더 자랑하자. 함수와 클래스에 조금 더 시간을 투자하자.&lt;br&gt;
+더 나은 이름을 선택하고, 큰 함수를 작은 함수 여럿으로 나누고, 자신의 작품에 조금만 더 주의를 기울이자. &lt;strong&gt;주의는 대단한 재능이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;클래스와 메서드 수를 최소로 줄여라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;중복을 제거하고, 의도를 표현하고, SRP를 준수한다는 기본적인 개념도 극단으로 치달으면 득보다 실이 많아진다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;클래스와 메서드 크기를 줄이면서, 그 수는 가능한 줄여야한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;추가) 정말 명확하고 필요한 클래스, 메서드만 만들어아 한다는 의미로 보임&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;때로는 무의미하고 독단적인 정책 탓에 클래스 수와 메서드 수가 늘어나기도 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스마다 무조건 인터페이스를 생성하라고 요구하는 구현 표준&lt;/li&gt;
+&lt;li&gt;자료 클래스(자료구조)와 동작 클래스(객체)는 무조건 분리해야 한다고 주장하는 개발자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;가능한 독단적인 견해는 멀리하고 실용적인 방식을 택해야 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;목표는 함수와 클래스 크기를 작게 유지하면서 동시에 시스템 크기도 작게 유지하는 데 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;하지만 이 규칙은 간단한 설계 규칙 네 개 중 우선순위가 가장 낮다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;다시 말해, 클래스와 함수 수를 줄이는 작업도 중요하지만&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;그보다 테스트 케이스를 만들고 중복을 제거하고 의도를 표현하는 작업이 더 중요하다는 뜻이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;결론&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;경험을 대신할 단순한 개발 기법이 있을까? 당연히 없다.&lt;/li&gt;
+&lt;li&gt;하지만 이 장, 아니 이 책에서 소개하는 기법은 저자들이 수십 년 동안 쌓은 경험의 정수다.&lt;/li&gt;
+&lt;li&gt;단순한 설계 규칙을 따른다면 (오랜 경험 후에야 익힐) 우수한 기법과 원칙을 단번에 활용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Clean-Code Chapter11]]></title><description><![CDATA[Intro…]]></description><link>https://www.lendingmachine.co.kr/blog/clean-code-chapter-11/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/clean-code-chapter-11/</guid><pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“복잡성은 죽음이다. 개발에게서 생기를 앗아가며, 제품을 계획하고 기획하고 제작하고 테스트하기 어렵게 만든다.” - 레이오지, 마이크로소프트 최고 기술 책임자&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;도시를 세운다면?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;도시를 세운다면 혼자서는 무리이다. 각 분야를 관리하는 팀이 있기때문에 돌아간다.&lt;/li&gt;
+&lt;li&gt;또한 적절한 추상화와 모듈화 때문에 잘 돌아간다.&lt;/li&gt;
+&lt;li&gt;그러나 막상 팀이 제작하는 시스템은 비슷한 수준으로 추상화를 이뤄내지못한다.&lt;/li&gt;
+&lt;li&gt;깨끗한 코드를 구현하면 낮은 추상화 수준에서 관심사를 분리하기 쉬워진다.&lt;/li&gt;
+&lt;li&gt;이 장에서는 높은 추상화 수준, 즉 &lt;strong&gt;시스템 수준에서도 깨끗함을 유지하는 방법&lt;/strong&gt;을 살펴본다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;1. 시스템의 생성과 사용을 분리하라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;우선, 생성(construction)은 사용(use)과 아주 다르다는 사실을 명심해야한다.&lt;/li&gt;
+&lt;li&gt;소프트웨어 시스템은 준비과정(객체생성, 의존성 연결)과 런타임 로직을 분리해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 1-1
+    public Service getService(){
+      if (service == null)
+        service = new MyServiceImpl(...); // 모든 상황에 적합한 기본값일까?
+       return service;
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Code 1-1은 “Lazy Initialization/Evaluation(게으른 초기화)“의 일반적인 형태이다.&lt;/li&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;필요할때 까지 객체생성을 미루므로 불필요한 부하가 걸리지 않는다.&lt;/li&gt;
+&lt;li&gt;null 포인터를 반환하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;MyServiceImpl 생성자 인수에 명시적으로 의존한다.&lt;/li&gt;
+&lt;li&gt;만약 MyServiceImpl이 무거운 객체라면 테스트를 위한 &lt;a href=&quot;https://tecoble.techcourse.co.kr/post/2020-09-19-what-is-test-double/&quot;&gt;Test Double&lt;/a&gt; / Mock Object 를 할당해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;초기화 지연 기법은 한번정도는 심각한 문제가 아니지만 많은 애플리케이션에서 수시로 사용한다.&lt;/li&gt;
+&lt;li&gt;이는 &lt;strong&gt;모듈성 저조와 심각한 중복&lt;/strong&gt;을 부른다.&lt;/li&gt;
+&lt;li&gt;체계적이고 탄탄한 시스템을 만들고 싶다면 흔히 쓰는 좀스럽고 손쉬운 기법으로 모듈성을 깨서는 절대로 안된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;설정 논리는 일반 실행 논리와 분리해야 모듈성이 높아진다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Main 분리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;시스템 생성과 시스템 사용을 분리하는 한 가지 방법으로, 생성과 관련한 코드는 모두 main 이나 main이 호출하는 모듈로 옮겨지고 나머지 시스템은 모든 객체가 생성되었고 모든 의존성이 연결되었다고 가정한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;팩토리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;객체가 생성되는 시점을 애플리케이션에서 결정할 필요도 생긴다.&lt;/li&gt;
+&lt;li&gt;main에서 factory 객체를 만들어서 전달하면된다. 만약 자세한 구현을 숨기고 싶다면 &lt;a href=&quot;https://victorydntmd.tistory.com/300&quot;&gt;Abstract Factory 패턴&lt;/a&gt;을 사용하자.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;생성하는 시점은 애플리케이션이 결정하지만 생성하는 코드는 모른다.&lt;/strong&gt; (전달받은 factory 사용)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;의존성 주입&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;사용과 제작을 분리하는 강력한 매커니즘이다.&lt;/li&gt;
+&lt;li&gt;의존성 주입은 &lt;a href=&quot;https://hudi.blog/inversion-of-control/&quot;&gt;제어역전(IoC)&lt;/a&gt; 기법을 의존성 관리에 적용한 메커니즘이다.&lt;/li&gt;
+&lt;li&gt;제어 역전에서는 한 객체가 맡은 보조 책임을 새로운 객채에게 전적으로 떠넘긴다.&lt;/li&gt;
+&lt;li&gt;새로운 객체는 넘겨 받은 책임만 맡으므로 단일 책임원칙을 지키게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    // Code 1-2, JNDI 검색 의존성 주입을 &quot;부분적으로 구현&quot;
+     MyService myService = (MyService)(jndiContext.lookup(&quot;NameOfMyService&quot;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;진정한 의존성 주입은 한 단계 더 나아가 완전히 수동적인 형태를 지닌다.
+&lt;ul&gt;
+&lt;li&gt;의존성을 필요로 하는 객체가 직접 의존성을 해결(생성, 연결)하는 대신&lt;/li&gt;
+&lt;li&gt;생성자/setter 등을 통해 DI 컨테이너가 해당 의존성을 해결하도록 도와준다.(DI / IoC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. 확장&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;군락은 마을로, 마을은 도시로 성장한다. 성장에는 고통이 따른다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;확장하는 과정에서 “왜 처음부터 크게 만들지 않았지?” 라고 생각 할 수있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;하지만 누가 마을의 성장을 고려해 미리 6차선 도로를 지으려 할까?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;처음부터 올바르게&lt;/strong&gt; 시스템을 만들 수 있다는 믿음은 미신이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;대신 오늘 주어진 스토리에 맞춰 시스템을 구현해야한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;내일은 새로운 스토리에 맞춰 확장하면된다. 이것이 반복적이고 점진적인 애자일 방식의 핵심이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TDD와 리팩토링으로 얻어지는 깨끗한 코드는 코드 수준에서 시스템을 조정하고 확장하기 쉽게 만든다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;시스템 수준 에서는 어떨까 ?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;소프트웨어 시스템은 물리적인 시스템과 다르다.&lt;br&gt;
+관심사를 적절히 분리해 관리한다면 S/W 아키텍처는 점진적으로 발전할수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href=&quot;https://willseungh0.tistory.com/61&quot;&gt;횡단(cross-cutting) 관심사&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이론적으로는 독립된 형태로 구분될 수 있지만 실제로는 코드에 산재하기 쉬운 부분들을 뜻한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.naver.com/tmondev/220556587811&quot;&gt;AOP&lt;/a&gt;는 횡단 관심사에 대처해 모듈성을 확보하는 일반적인 방법론이다.&lt;/li&gt;
+&lt;li&gt;AOP에서 &lt;strong&gt;관점&lt;/strong&gt;이라는 모듈 구성 개념
+&lt;ul&gt;
+&lt;li&gt;“특정 관심사를 지원하려면 시스템에서 특정 지점들이 동작하는 방식을 일관성 있게 바꿔야 한다” 라고 명시한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;명시는 간결한 선언이나 프로그래밍 메커니즘으로 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 자바 프록시&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;단순한 상황에 적합하다.&lt;/li&gt;
+&lt;li&gt;개별 객체나 클래스에서 메서드 호출을 감싸는 경우가 좋은 예다.&lt;/li&gt;
+&lt;li&gt;JDK Dynamic Proxy : 인터페이스만 지원 (자바 리플렉션 이용)&lt;/li&gt;
+&lt;li&gt;CGLIB. ASM, javassist : 클래스 프록시 (바이트 코드 조작)&lt;/li&gt;
+&lt;li&gt;직접 구현시에 코드가 상당히 많으며 복잡하며 깨끗한 코드를 작성하기 어렵다!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. 순수 자바 AOP 프레임워크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;대부분의 프록시 코드는 비슷해서 도구로 자동화 할 수 있다.&lt;/li&gt;
+&lt;li&gt;Spring, JBoss AOP와 등과 같은 여러 자바 프레임워크는 내부적으로 프록시를 사용한다.&lt;/li&gt;
+&lt;li&gt;스프링은 비지니스 논리를 POJO로 구현한다. 따라서 테스트가 개념적으로 더 쉽고 간단하다.&lt;/li&gt;
+&lt;li&gt;프로그래머는 설정 파일이나 API를 활용해 필수적인 구조를 구현한다.
+&lt;ul&gt;
+&lt;li&gt;영속성, 트랜잭션, 보안, 캐시, 장애조치 등과 같은 횡단 관심사 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5. AspectJ 관점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;관심사를 관점으로 분리하는 가장 강력한 도구는 AspectJ 언어다.&lt;/li&gt;
+&lt;li&gt;AspectJ는 언어 차원에서 관점을 모듈화 구성으로 지원하는 자바 언어 확장이다.&lt;/li&gt;
+&lt;li&gt;다만 이를 사용하기 위해 새언어 문법과 사용법을 익혀야 한다는 단점도 존재한다.&lt;/li&gt;
+&lt;li&gt;스프링은 어노테이션 기반 관점을 쉽게 사용하도록 다양한 기능을 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;6. 테스트 주도 시스템 아키텍처 구축&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;관점으로 관심사를 분리하면 즉, 코드수준에서 아키텍처 관심사를 분리할 수 있다면, 진정한 테스트 주도 아키텍처 구축이 가능해진다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;아주 단순하면서도 멋지게 분리된 아키텍처로 소프트웨어 프로젝트를 진행해 결과물을 재빨리 출시한 후, 기반 구조를 추가하며 조금씩 확장해나가도 괜찮다. 그렇다고 아무 방향 없이 프로젝트에 뛰어들어도 좋다는 뜻은 아니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;프로젝트를 시작할때는 일반적인 구조를 생각해야 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;최선의 시스템 구조는 각기 &lt;a href=&quot;https://ittrue.tistory.com/211&quot;&gt;POJO&lt;/a&gt;(또는 다른) 객체로 구현되는 모듈화된 관심사 영역(도메인)으로 구성된다.&lt;br&gt;
+이렇게 서로 다른 영역은 해당 영역 코드에 최소한의 영향을 미치는 관점이나 유사한 도구를 사용해 통합한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;7. 의사 결정을 최적화 하라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;우리는 때때로 &lt;strong&gt;가능한 마지막 순간까지 결정을 미루는 방법&lt;/strong&gt;이 최선이라는 사실을 까먹곤한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;최대한 정보를 모아 최선의 결정을 내리기 위해서이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;성급한 결정은 불충분한 지식으로 내린 결정이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;고객 피드백을 모으고 더 고민하고, 구현 방안을 더 탐험한 후에 결정해도 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;관심사를 모듈로 분리한 POJO 시스템은 기민함을 제공한다. 이런 기민함 덕택에 최신 정보에 기반해&lt;br&gt;
+최선의 시점에 최적의 결정을 내리기가 쉬워진다. 또한 결정의 복잡성도 줄어든다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;8. 명백한 가치가 있을 때 표준을 현명하게 사용하라&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;아주 과장되게 포장된 표준&lt;/strong&gt;에 집착하는 바람에 고객 가치가 뒷전으로 밀려난 사례도 많이 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ex) 과거 EJB도 단지 표준이라는 이유만으로 많은 팀이 사용했다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;표준을 사용하면 아이디어와 컴포넌트를 재사용하기 쉽고 적절한 경험을 가진 사람을 구하기 쉬우며,&lt;br&gt;
+좋은 아이디어를 캡슐화하기 쉽고, 컴포넌트를 엮기 쉽다. 하지만 때로는 표준을 만드는 시간이 너무 오래 걸려 업계가 기다리지 못한다.&lt;br&gt;
+어떤 표준은 원래 표준을 재정한 목적을 잊어버리기도 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;9. 시스템은 도메인 특화 언어가 필요하다&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DSL은 간단한 스크립트 언어나 표준 언어로 구현한 API를 가리킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DSL로 짠 코드는 도메인 전문가가 작성한 구조적인 산문처럼 읽힌다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;좋은 DSL은 도메인 개념과 그 개념을 구현한 코드 사이에 존재하는 “의사소통 간극”을 줄여준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;도메인 특화 언어(Domail-Specific Language)를 사용하면 고차원 정책에서 저차원 세부사항에  이르기까지 모든 추상화 수준과 모든 도메인을 POJO로 표현할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;결론&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;시스템 역시 깨끗해야 한다. 깨끗하지 못한 아키텍처는 도메인 논리를 흐리며 기민성을 떨어뜨리고 제품 품질도 떨어진다.&lt;/li&gt;
+&lt;li&gt;버그가 숨어들기 쉬워지고 생산성이 낮아져 TDD가 제공하는 장점이 사라진다.&lt;/li&gt;
+&lt;li&gt;모든 추상화 단계에서 의도는 명확히 표현해야 한다. 그러려면 POJO를 작성하고 각 구현 관심사를 분리해야 한다.&lt;/li&gt;
+&lt;li&gt;시스템, 모듈을 설계할땐 &lt;strong&gt;실제로 돌아가는 가장 단순한 수단&lt;/strong&gt;을 사용해야 한다는 사실을 명심하자.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 9]]></title><description><![CDATA[리팩토링 분류 코드를 상태/전략 패턴로 치환 As-Is 상태패턴 
 Logger 클래스에 int로 선언되어 있는 상태값들을 State 객체로 치환해 준 후 각 상태에 따른 하위 클래스를 상속받아 구현합니다. To-Be 더 나아가기 개발자는 Logger…]]></description><link>https://www.lendingmachine.co.kr/blog/refactoring-chapter-9/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/refactoring-chapter-9/</guid><pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;리팩토링&lt;/h1&gt;
 &lt;h4&gt;분류 코드를 상태/전략 패턴로 치환&lt;/h4&gt;
 &lt;h2&gt;As-Is&lt;/h2&gt;
@@ -85,7 +518,7 @@ Logger 클래스에 int로 선언되어 있는 상태값들을 State 객체로 �
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 97.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB9ElEQVQ4y42SW2+jMBCF8///2mqfmjRVsglQlOAYbGx8HXtsVuBuVk1bKeeBy6DPzJw5GymlEIIzzhi7LSKU9owxxvnQ9+M4DsPAOE8pzV+08d6nlKy1bds65xARAObntBFC3G63rusopVrrlBIA5JyfgqWUXdcRQkYhnHPzPIcQnoVjjBBCAIgAiBhjRMRn2y63HEK2OoVgh96wwQ297amlxA4DWPPTcR9w8i5N0lhbn6u6qt6bpqnruqqq87ltW2PMD3BehTjHpWVYmw8hhuU1hhBCjEtr//S4KkQUUnaEJETvvXMu55TzYjsApJQopVLKctYnWClljClhEKvh91UBgFLKWiuEMMaUcz/BnPO2beu6vlwuh8PBGHMPEyIqpaZpstauk+E3fxZCUErHcYwxeu/jOmSZExFL/ooXDyFdQkIIsdYunqdUjCpkWpVzBoBSLJX/cAlGUXkOq8qQALD6vRTLa8l/SgkRNw+rw9Vwxni9ylrrvS+NAMA4ju9Nc/pz4iM3xnwDCyEmOWmtAeDucM5ZaT1NH3UA0Fo/wjFG0nWjEJNSIYQySPk0UMo4n5Ty6/IB4BEG546/f13e9u1uO7RtMX25zHOz2173r9e3PTkdi21fYIDjy0v9+lrtduza3eF5npvj4bzdVrsdqc4lRX8BafFPfF2OitYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 97.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB7UlEQVQ4y42TXZubIBCF8/9/W3u1cdPWNOi6iR+oICgwMEifONttNs1FzoX6iC/MOTPu1KSknMZhHIaha7u2bbuuGzdxzoUQfd8P4xhjTP9pBwAxRmNMVVXWWkQEgPScdlLKruuapuGcz/McYwSAdV2fgqdpquu6aRohpbU2peS9fxYOIYD3HiAAIGIIARGfLZtuq/erWWLwduBm7E3PLe8Mb03fg1nwUVr/4OhsVNNiTMFYwU5vZVkWRcEYO52qqjLGPIZXUsS0FQxUvA+3upb2V19gt309TVPTtDFG55y1Nm4CAOccInLOlVIhBO/9F1hrvSyLEIJzLrfAnXO05r3XWhtjpJTzvNC+X2AhxPv7uSiK8/mc57kx5nOYEFFrrZSiWhDxwclSSjr22jYAMkk+ETHGaK2lLO6GdLe5bSjPGONtQuQ8pUQ7fiR7w+9wEzH04Dcty9Wkc877j+hhk9nmn1zs7lqHiM65YRgYY0VRGGMov3VdAUAIUZbl8XgUQizL8gCWUqpJzfNMraKE13XV86zU9T2V8wgOoa1rISetNXhPRmip53wchdLabX8xANzDYG3+/dv5x6HKsr6qKPTrJaUy218Or5efh+Z3TrHdwx4gf3kpDq8sy4ZL/QmnlMr812m/Z1nWsBPN6R9Bzk/S8ATpbAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -189,104 +622,7 @@ new 키워드를 통해 상태 객체를 생성한 후 Logger의 상태를 변�
 어떻게 하면 좀 더 깨끗한 시스템으로 수정할 수 있을까?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;factory, IoC, DI&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 7]]></title><description><![CDATA[리팩토링 분류 코드를 클래스로 치환 As-Is Item 이라는 객체가 있습니다 item의 타입을 static 변수로 생성하여 객체 생성 시 넣어줍니다. 이렇게 타입을 int 로 설계할 경우 이렇게도 객체를 생성할 수 있습니다.…]]></description><link>https://www.lendingmachine.co.kr/blog/refactoring-chapter-7/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/refactoring-chapter-7/</guid><pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;리팩토링&lt;/h1&gt;
-&lt;h3&gt;분류 코드를 클래스로 치환&lt;/h3&gt;
-&lt;h2&gt;As-Is&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_BOOK&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_DVD&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_SOFTWARE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_BOOK&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;리팩토링&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; dvd &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_DVD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;스타워즈&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;35000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; software &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_SOFTWARE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MS-Office&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Item 이라는 객체가 있습니다 item의 타입을 static 변수로 생성하여 객체 생성 시 넣어줍니다.&lt;br&gt;
-이렇게 타입을 int 로 설계할 경우&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; officeSupplies &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Highlighter&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이렇게도 객체를 생성할 수 있습니다.&lt;br&gt;
-7 이라는 코드값이 문제가 되는 값이지만 &lt;strong&gt;컴파일 단계&lt;/strong&gt; 에서는 전혀 알 수 없습니다.&lt;br&gt;
-또한 itemType 이 아닌 다른 분류코드가 추가 될 경우 혼돈될 수 있습니다.&lt;/p&gt;
-&lt;h2&gt;To-Be&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BOOK&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;DVD&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;SOFTWARE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;BOOK&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;리팩토링&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; dvd &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DVD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;스타워즈&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;35000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; software &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;SOFTWARE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MS-Office&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ItemType 이라는 타입 객체를 추가하여 Item 객체를 리팩토링 하였습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; officeSupplies &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Highlighter&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이제는 이러한 코드는 컴파일 단계에서 오류를 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;ItemType 객체를 추가함으로써 분류코드가 어떠한 분류코드인지 확실히 알 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 8]]></title><description><![CDATA[리팩토링 분류 코드를 하위 클래스로 치환 단순히 객체를 식별하는 것뿐만 아니라 분류 코드 종류에 따라 객첵 다른 동작을 한다면 클래스로 치환하는 것 만으로 쉽게 해결할 수 없습니다. As-Is Shape 클래스는 도형을 나타냅니다. getName…]]></description><link>https://www.lendingmachine.co.kr/blog/refactoring-chapter-8/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/refactoring-chapter-8/</guid><pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;리팩토링&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 8]]></title><description><![CDATA[리팩토링 분류 코드를 하위 클래스로 치환 단순히 객체를 식별하는 것뿐만 아니라 분류 코드 종류에 따라 객첵 다른 동작을 한다면 클래스로 치환하는 것 만으로 쉽게 해결할 수 없습니다. As-Is Shape 클래스는 도형을 나타냅니다. getName…]]></description><link>https://www.lendingmachine.co.kr/blog/refactoring-chapter-8/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/refactoring-chapter-8/</guid><pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;리팩토링&lt;/h1&gt;
 &lt;h3&gt;분류 코드를 하위 클래스로 치환&lt;/h3&gt;
 &lt;p&gt;단순히 객체를 &lt;strong&gt;식별하는&lt;/strong&gt; 것뿐만 아니라 분류 코드 종류에 따라 객첵 &lt;strong&gt;다른 동작을 한다면&lt;/strong&gt; 클래스로 치환하는 것 만으로 쉽게 해결할 수 없습니다.&lt;/p&gt;
 &lt;h2&gt;As-Is&lt;/h2&gt;
@@ -601,7 +937,7 @@ TYPECODE_OVAL -&gt; ShapeOval&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAABb0lEQVQoz32QO0/DMBSF8+uQujEwMDDBhITEwoL4FzwkNhhKWRAC1K08JChSJUBiQYKqVVtK06SNk9iJr2PH9kVpKGOP5OV8x/a9xyGEDIc/SZoKDn4UbdSrd50PzOQoJOv1arPfRqmGYbB2ddoadFDpT2+0VDtYOtt3k9hhjE0mEyFEQmnA6N7DTeu7q0H4cbR7f/3608s5H8fRzu3luzvQHPpkUjk/qpwfBpA6cRxPp9MsyxDRWosLVeJpykJIEdGRUgohtNYzZs38AYuo52lEnPm29P8DxWVKaZ7nei5THKOBY+vBBL5G1AUt7CKkpL04MbVjlJlDCOn1epxzpZQA8D0vYUxoA51P3FpRzQYgCp76vk8phTzn/S5ur+LmMg46TpomYRgCgJTS2tnQ5eDWovuNMvvbtmQlennE50axM2MsmokQYoxZ0FM7Ju0o0EoJa8FaKaWzqFxjyq/KEttvT18vT2EUe+7IG7sA8AswZvWZQDrqPwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAABZElEQVQoz31Qu0oDQRTdv4t2FhZWdgo2YmEjfoYpLEUwVgoK2igRfEDACFaiMSEm0dUJO7O7k5k7O88r66rYmFPe87icEzFKR6NXIYSSMM7S5dNGs/eAhY5TunSydzN4xsK8Mbp4vNsa9tDYJxLXGvXa3tb7JIt4zsmYKKUmeZ7wfPPiuDXsOVAkSzeaR+3XvpXyPUvXzw/v44GT8ELHM/v12UY9ARFleZYkSVEUiBhCwKmoaAqCKYmIkS4KALDOVWZXBoRK5xD9j8cHX0WHn4hQmrXmnFtr3V9470Biq+kT4hBdyXrnXCkyGg92sLGNWkWUsn6/L6U0xigFhJAJ58p56D7i6ry5PgNEJQUhJM9zsFa+9HBtIazM4aAbCSEYYwCgtQ5fwKp5CBgPUBffbf9St5d4c1Z25pynX6CU+n8Gq66dLOmwxBkLIQCiNiaaOm74fVua76477SuWZh/xG/mIAeAThRH10u7pbxkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -618,302 +954,104 @@ TYPECODE_OVAL -&gt; ShapeOval&lt;/p&gt;
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[마이크로 프론트엔드]]></title><description><![CDATA[1. 마이크로 서비스란? 일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다. 데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.…]]></description><link>https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;1. 마이크로 서비스란?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다.&lt;/li&gt;
-&lt;li&gt;데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;2 마이크로 프론트엔드란&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;기존 웹페이지는 기능이 많지 않고 단순했기 때문에 하나의 레포지티에서 관리를 했는데 이를 모놀리식라 합니다.&lt;/li&gt;
-&lt;li&gt;하지만 점차 시간이 지날수록 웹의 기능이 많아지기 시작했고 프론트엔드 영역이 많아지고 복잡해져서 유지보수가 어려워지기 시작했습니다. 그렇기 때문에 이를 효율적으로 다뤄야 할 필요가 생겼습니다.&lt;/li&gt;
-&lt;li&gt;프론트엔드에 마이크로 서비스의 개념을 도입하여 전체 화면을 작동할 수 있는 단위로 나누어 개발한 후 서로 조립하는 방식을 접목시켰습니다.&lt;/li&gt;
-&lt;li&gt;방법은 크게 멀티레포, 모노레포로 나뉩니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;3. 모놀리식이란?&lt;/h1&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 558px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsTAAALEwEAmpwYAAADFklEQVQ4y42UaXPiRhCG+f+/JVVJtihvNrGx2UUnRqMDXTM60c0hdKCDBTQJyGaxd7NJ1/uh9aqeaU2Xugf4JrquwxhneeoGVph44fIsP3a9yDkej/i7GNw+nLoTxtj0dTWasdp4OP7lnh3CGACTquqqP72P9/DV3WxXdogsH2qWjFzVjU0nNA7Hw79W7rF236bZJi+yosjLstjtynJXFkVeFPk2Ty/abrM0L/LTqXuBezKI/alMCBYLDJq/6E1iMr0AolQf2AE6nbpL5Q4raE7LT8CgfiIOUaLNoESU3Knic3mRDXCHLR/qEXC3mr1Rb6Rc9M1xUk2P+PniWQt4xefW6WpQ17XqgbAyvRx6OVxkep/4BfILdGsuMj3cmaoPgElrId/Dlebz1loGBiU5U8FiBIvhTVrxORgJgsVIzlS0WcFigEHpIY8SaaYT+hXWAwHG4oR/GLEf7z7/+sDcMfITB0nepKfal3tq+Mfk97+oISmORJvRQp6DpH5b2d4oHCJnkGTVLxwigUFpAYCxCAxqBompNrm8JWAsoEScwWvlplI94JfIK6BfoqBEl9vCbzd/cc73D0oEI+E7uEDea1e8/CW5Nu+a+0UPk29gL4dGIpkr+ay1DGPR3ijuVkOJZPXmSkaxeHbiy2dHwnqzfGkYSiR6PmaUz4TwQEmPAJF9n2eQoOdPhDgipUdWGc/dZz0SeJMWbSYv80F1gY1Eeu32byP2bqpNBJOW7Ck1f/yTHH4iPozYj5T0OHeeYSxMhHvdUnCHB03bqAuwKHRjKVlruRdKRCdVFtl7081UAGnXc/B5Gi7/drKO1IWgB6IeCFepHq96QA8EzT/rbIai5onrdHWdpX6qcNvum9do2/br/utt7Pdt0zR1Xe/3+yv5ZiSvcTge0my93MTJJlxuolW6bJr63ar6wRrqQ9J5VhtziOQMcoYIDhEkeOpr/myHYYyPh5MZaF6pO6nyifggOWzUWMpi1rbtf8MYYy92UCjBUOIRrSyAGcvQlQ+Hw/+Cu66r63pX7eqmqqpdtauOhx/s3X/gvwEfbw7bSQoIsgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;모놀리식이란?&quot;
-        title=&quot;모놀리식이란?&quot;
-        src=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
-        srcset=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/c26ae/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 158w,
-/static/e514013b03104b37fd097ab6cd9ec6c6/6bdcf/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 315w,
-/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 558w&quot;
-        sizes=&quot;(max-width: 558px) 100vw, 558px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;장점
-&lt;ul&gt;
-&lt;li&gt;단순성 : 모든 코드가 단일 코드 베이스이기 때문에 로컬에서 실행 시 단일 애플리케이션만 실행하면 됩니다.&lt;/li&gt;
-&lt;li&gt;간편한 배포 : 단일 프로젝트를 배포하면 되기 때문에 간편합니다.&lt;/li&gt;
-&lt;li&gt;디버깅과 테스트가 쉬움 : 모든 코드가 단일 프로젝트에 있기 때문에 디버깅 및 테스트가 쉬움&lt;/li&gt;
-&lt;li&gt;쉬운 모니터링 : 코드가 단일 프로젝트에 존재하기 때문에 오류가 발생한 위치를 찾기 쉽습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;단점
-&lt;ul&gt;
-&lt;li&gt;유지 보수의 어려움 : 프로그램 규모가 커질수록 유지보수가 힘들어집니다.&lt;/li&gt;
-&lt;li&gt;유연하지 않는 확장성 : 모놀리식도 확장은 가능하지만 특정 단위로 확장은 불가능하고 전체 프로젝트 단위로 확장해야 합니다.&lt;/li&gt;
-&lt;li&gt;대규모 팀 작업이 어려움 : 모든 팀이 동일한 코드, 동일한 프로젝트에서 작업하기 때문에 코드의 충돌 가능성이 높고 이에 따른 다른 개발자의 작업에 영향을 줄 수 있습니다.&lt;/li&gt;
-&lt;li&gt;기술 사용 제한 : 기존 프로젝트를 다른 기술로 변환하기 어렵기 때문에 일반적으로 프로젝트를 구성하면 오랫동안 동일한 기술을 사용합니다.&lt;/li&gt;
-&lt;li&gt;느린 배포 속도 : 하나의 레포지티에서 배포하므로 속도가 느려집니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;그렇다면 언제 모놀리식을 사용할까요?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;규모가 작은 애플리케이션의 경우&lt;/li&gt;
-&lt;li&gt;현 비즈니스를 성장할 계획이 없거나, 복잡한 시스템이 없고 관리가 필요하지 않을 경우&lt;/li&gt;
-&lt;li&gt;아직 아이디어 구상 단계일 경우&lt;/li&gt;
-&lt;li&gt;팀의 규모가 작거나 신생 팀일 경우와 새로운 도메인을 시작할 때&lt;/li&gt;
-&lt;li&gt;**MVP(최소 기능 제품)**일 경우는 모놀리식이 피드백을 빠르게 수정이 가능합니다.&lt;/li&gt;
-&lt;li&gt;주된 작업이 CRUD일 경우&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;4. 모놀리식에서 마이크로서비스, 마이크로 프론트엔드 까지&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;마이크로서비스는 애플리케이션을 도메인을 기준으로 모놀리식한 백엔드의 서비스를 분리하는 것을 의미합니다. 마이크로 프론트엔드는 이 개념을 프론트엔드 세계로 확장한 것입니다.&lt;/li&gt;
-&lt;li&gt;마이크로프론트엔드는 웹 어플리케이션을 서로 다른 모듈 및 개별 기능으로 분할하고 조합하는 아키텍처이며 백엔드의 마이크로 서비스의 이점인 유연성과 보다 높은 개발 생산성을 가집니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 44.30379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVQoz5VRTUsbYRDOzR/gqSAeNIJivXnxJuRaxJto8QNEBa/+AP+DHoqCSESC2iJ+UEqjMVE3cRPTqKWoEY1icDfdGON+7/vu+87I+tEmRx+G4ZkZnhl4xocVgOrAt/yPALw2XogPKlCx4U0DHJiLnOHzlFB6J8kFRWGMeWKsRk5Wzm/vzvOSahNElB/1HfEwfZq1GCDnV9mz2HZYiEakm5wnzst/L/PSRV4ql0qXJrTuWw1Rs3ZLH/rtFBxsi1P/rvVhxxr4w5E606s/ZtbDU9++f9mMeOLOuO6PaP6I+ilpZA3oEGn7AW0WyPgplW3+Maa3xvT6bW3w2DYY9Pwy+9La57TWf2Qhgq8j6bbESZNAAmn32oLeE9qVoYEUmcwB0dWZhdBcaGVqLrj5c4sxFlz6Oh9amg0uLq9teJd1Fx4oFAlwgDMDGvecuphTE7a7j0jBYoMHxZHU/XBSmTgumwyGxOLYYXE0pQyn7v8b9uKvzSFR5rslHi3xrMFNhoKKwiMmVMzo6IJXJlQUVRQ1fH5V9WPfhScggNYGbco6dgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;웹 아키텍쳐&quot;
-        title=&quot;웹 아키텍쳐&quot;
-        src=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
-        srcset=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/c26ae/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 158w,
-/static/7a155f8e4b49a0fc45f8fdb7afbf8070/6bdcf/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 315w,
-/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 630w,
-/static/7a155f8e4b49a0fc45f8fdb7afbf8070/40601/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 945w,
-/static/7a155f8e4b49a0fc45f8fdb7afbf8070/78612/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1260w,
-/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1386w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h1&gt;5. 멀티레포 vs 모노레포&lt;/h1&gt;
-&lt;p&gt;마이크로프론트엔드를 구현하는 구조에는 멀티레포와 모노레포가 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByElEQVQoz3WSSY7cMAxF6/6bHCMXyHmS9OSyrcEaKXGQGLhc3ehNCC0EQsR/n/o3Ve2I7ghHTDGXIcMQkEiIKeXiQoAKWTARppRdCDFlH+IYQ1VvqloB3pZ12fbNWmF5bbkz3XezGvu63MMRLDXTwVr3dl9XYz/WTUTO4TEGi0ydU8d1H2M0xE5EwjIHEvHVnVNV55xjTmJRnTdmBkRk7kTI3Hp/200s5c+y/V3WZTe51nNe5MO43+/31fmQS+tdp96IGZn1szriGANaz1BzPU8shfhUj6WkWjNABmjYT2xivrA2H1QVCe/WpVrfd/OxG+N9gUpMIrJ5/74bG0IspXWcOm9IpKqvm/3x89dJQdQQa2tHSiHnmMsXdqzFp5Rrrb11xCc2i9TWXu67jIGEIZcMsPljc96GkGq93pgjLMY9lCt8xybm2tqcEwldTBlgMW7z3oWYH9gsbENcnfcxplqhfw5f5J8L68RcAGIpBaAApFLwVOYj58twadAubBZpiCzCcup3xMXYVOrzq4w9PT8XdizG+ZhOZcQ59TbmFJFcT84T7ozO/PJCTJ1IhjxSMnKF3Qd5ZOkZT1WVMTo+4af+t1ikf/P4D5Qu7gioib/4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;멀티모노레포&quot;
-        title=&quot;멀티모노레포&quot;
-        src=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
-        srcset=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/c26ae/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
-/static/9b815cea5bdf2ce49641a6f44415a8a1/6bdcf/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
-/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
-/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 691w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;5.1 멀티레포&lt;/h2&gt;
-&lt;p&gt;레포지티를 여러개로 나눠서 관리하는 방법&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABH0lEQVQoz5VSy2qFUAxUfFxfR8UnKuIDN6Io4s694Nr//4X+gimT1raL29K7GBLCyWQmOZIkSSTLMiF6nkfDMFDTNKQoCtf+ieszvklITNMk27bJMAxKkoSiKCLf98l1XdI07XVCkK3rSud5sjLLsnhIlmWc442u6wwMgBMME0LwYCHEhZqmaR+EjuPQNE20bRuVZUl1XTNg/fF4MCEiCFVVZRdpmjKqqsLgC+8dx/km7LqOlmXhRigG0AgS7Bhqi6JgdVCGeKt/anmeZzqOgwnRAIAEhFhDHMdMEgQBxxtPCdHc9z2N48gWIL9tW7YMQrxBfd93znE07PDXo0A6FOIoP68XhiEfBzmWjyHI74P8eWXsC3byPP/aF2qvfpt3DiDNMzJ4P40AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;멀티레포&quot;
-        title=&quot;멀티레포&quot;
-        src=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
-        srcset=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/c26ae/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 158w,
-/static/05e81c28237ad5a2428ee4cb03c78359/6bdcf/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 315w,
-/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 630w,
-/static/05e81c28237ad5a2428ee4cb03c78359/40601/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 945w,
-/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 996w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;장점
-&lt;ul&gt;
-&lt;li&gt;레포지티 별 담당자를 지정
-&lt;ul&gt;
-&lt;li&gt;수월한 패키지 관리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;레포지티의 빠른 CI Build
-&lt;ul&gt;
-&lt;li&gt;기능을 레포지티 별로 나눠서 개발 하므로 레포지티 크기가 작아짐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;패키지의 명확한 분리로 인한 유연성 향상
-&lt;ul&gt;
-&lt;li&gt;레포지티 상 서로 연계 관계가 없기 때문에 추가, 수정, 유지 관리 편리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;단점
-&lt;ul&gt;
-&lt;li&gt;중복된 설정 및 반복된 설치
-&lt;ul&gt;
-&lt;li&gt;모든 공통된 설정과 모듈들을 반복적으로 설정/설치해야 함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;코드 재사용이 쉽지 않으므로 중복 코드 가능성이 높아짐
-&lt;ul&gt;
-&lt;li&gt;다른 레포지티 코드를 사용하기 위해서 추가 작업이 필요&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;이슈의 분산
-&lt;ul&gt;
-&lt;li&gt;각 다른 레포지토리가 연관되어있는 이슈 트래킹 관리 어려움&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;디펜던시 헬
-&lt;ul&gt;
-&lt;li&gt;프로젝트가 커지면 많은 레포지티가 생기고 그에 따른 다양한 의존관계가 생겨서 복잡해짐&lt;/li&gt;
-&lt;li&gt;여러 패키지들이 사용하는 같은 모듈에서 버전 차이 발생 및 충돌 발생 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;5.2 모노레포&lt;/h2&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVQoz42R3YqGIBCGR8X8yUaLzFQ6CILgu43A4+7/apbNj9htF3afAw+Ux3lnBgCAEAIAUsr1Qmt9X96QH7wfGGOIKITo+95775xDxKZp4D8QQtZ1Pc8zpaS1NsbknI0xACCEaC76C2utu7DWUko/ZUppjHHfdyFE/W4Yhq8y59x7H0KYpimllHNOKTHG3nLOuZSCiA95nucQQi1lrZVSPmNTSlNKr9dLKfWQvffjOCJijd227T28b/JxHF3X3XJNsW1bKQUAYox3rmflZVmUUrUCIt4DU0o55+oif58/Y6zrutoYItaTc/7nnj4AicYUzvPgMx8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;모노레포&quot;
-        title=&quot;모노레포&quot;
-        src=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
-        srcset=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/c26ae/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
-/static/a24eec5f0f49d64f64ed40afafbc479f/6bdcf/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
-/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
-/static/a24eec5f0f49d64f64ed40afafbc479f/40601/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 945w,
-/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 996w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;레포지티 하나에서 나눠서 관리하는 방법(멀티레포의 장점은 단점으로 단점은 장점으로 변한다.)
-&lt;ul&gt;
-&lt;li&gt;장점
-&lt;ul&gt;
-&lt;li&gt;공통 항목 단일화
-&lt;ul&gt;
-&lt;li&gt;eslint, Build, Unit Test 등 공통된 설정 및 필요한 node module을 한 번의 설치와 한 번의 설정으로 모든 패키지가 사용할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;쉬운 코드 공유&lt;/li&gt;
-&lt;li&gt;단일 이슈 트래킹
-&lt;ul&gt;
-&lt;li&gt;모노레포 내 연관된 패키지들에 관한 (분산될 필요 없는) 이슈 트래킹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;효율적인 의존성 관리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;단점
-&lt;ul&gt;
-&lt;li&gt;Repository의 거대화
-&lt;ul&gt;
-&lt;li&gt;분산되어 있던 모든 리소스를 하나의 레포로 합치면서 생기는 문제&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;느린 CI Build
-&lt;ul&gt;
-&lt;li&gt;CI가 하나로 구성된다는 장점 == 규모가 커짐에 따라 분산된 CI 빌드보다 속도가 느릴 수밖에 없음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;무분별한 의존성
-&lt;ul&gt;
-&lt;li&gt;Package 간 의존성 관리가 쉽지만, 오히려 과도한 의존성 관계 발생 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Observer Pattern]]></title><description><![CDATA[Observer Pattern  Problem…]]></description><link>https://www.lendingmachine.co.kr/blog/observer-pattern/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/observer-pattern/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Observer Pattern&lt;/h1&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Refactoring Chapter 7]]></title><description><![CDATA[리팩토링 분류 코드를 클래스로 치환 As-Is Item 이라는 객체가 있습니다 item의 타입을 static 변수로 생성하여 객체 생성 시 넣어줍니다. 이렇게 타입을 int 로 설계할 경우 이렇게도 객체를 생성할 수 있습니다.…]]></description><link>https://www.lendingmachine.co.kr/blog/refactoring-chapter-7/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/refactoring-chapter-7/</guid><pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;리팩토링&lt;/h1&gt;
+&lt;h3&gt;분류 코드를 클래스로 치환&lt;/h3&gt;
+&lt;h2&gt;As-Is&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_BOOK&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_DVD&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_SOFTWARE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_BOOK&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;리팩토링&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; dvd &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_DVD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;스타워즈&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;35000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; software &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ITEM_TYPE_SOFTWARE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MS-Office&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Item 이라는 객체가 있습니다 item의 타입을 static 변수로 생성하여 객체 생성 시 넣어줍니다.&lt;br&gt;
+이렇게 타입을 int 로 설계할 경우&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; officeSupplies &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Highlighter&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게도 객체를 생성할 수 있습니다.&lt;br&gt;
+7 이라는 코드값이 문제가 되는 값이지만 &lt;strong&gt;컴파일 단계&lt;/strong&gt; 에서는 전혀 알 수 없습니다.&lt;br&gt;
+또한 itemType 이 아닌 다른 분류코드가 추가 될 경우 혼돈될 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;To-Be&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BOOK&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;DVD&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;SOFTWARE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;itemType&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;price&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;BOOK&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;리팩토링&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; dvd &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DVD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;스타워즈&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;35000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; software &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ItemType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;SOFTWARE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MS-Office&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ItemType 이라는 타입 객체를 추가하여 Item 객체를 리팩토링 하였습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt; officeSupplies &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Highlighter&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제는 이러한 코드는 컴파일 단계에서 오류를 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;ItemType 객체를 추가함으로써 분류코드가 어떠한 분류코드인지 확실히 알 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Observer Pattern]]></title><description><![CDATA[Observer Pattern  Problem…]]></description><link>https://www.lendingmachine.co.kr/blog/observer-pattern/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/observer-pattern/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Observer Pattern&lt;/h1&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -1116,7 +1254,302 @@ TYPECODE_OVAL -&gt; ShapeOval&lt;/p&gt;
 &lt;strong&gt;newsPublisher.removeObserver(newsSubscriber1)&lt;/strong&gt; 이후에는 구독자 2만이 수신받게 됩니다.&lt;br&gt;
 코드상에서 &lt;strong&gt;NewsSubscriber&lt;/strong&gt; 는 생성시 구독정보만 주입할 뿐 어떠한 행위를 하지 않았습니다.&lt;/p&gt;
 &lt;h2&gt;Applicability&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;옵서버 패턴은 한 객체의 상태가 변경되어 다른 객체들을 변경해야 할 필요성이 생겼을 때, 그리고 실제 객체 집합들을 미리 알 수 없거나 이러한 집합들이 동적으로 변경될 때 사용하기에 적합한 패턴입니다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HTTP 구조에 대해]]></title><description><![CDATA[HTTP 클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다. 이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다. 1. HTTP 1.1 구조에 대해 1.1 request 구조 HTTP…]]></description><link>https://www.lendingmachine.co.kr/blog/HTTP 1.1/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/HTTP 1.1/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;HTTP&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;옵서버 패턴은 한 객체의 상태가 변경되어 다른 객체들을 변경해야 할 필요성이 생겼을 때, 그리고 실제 객체 집합들을 미리 알 수 없거나 이러한 집합들이 동적으로 변경될 때 사용하기에 적합한 패턴입니다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[마이크로 프론트엔드]]></title><description><![CDATA[1. 마이크로 서비스란? 일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다. 데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.…]]></description><link>https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/마이크로 프론트엔드/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;1. 마이크로 서비스란?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적으로 복잡한 문제를 해결할 때 가장 효율적인 방식은 문제는 작게 나누어 작은 문제를 해결하는 방식입니다.&lt;/li&gt;
+&lt;li&gt;데이터 단위로 작게 나누어 작은 문제를 하나씩 해결을 해나가는게 마이크로 서비스의 개념입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2 마이크로 프론트엔드란&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;기존 웹페이지는 기능이 많지 않고 단순했기 때문에 하나의 레포지티에서 관리를 했는데 이를 모놀리식라 합니다.&lt;/li&gt;
+&lt;li&gt;하지만 점차 시간이 지날수록 웹의 기능이 많아지기 시작했고 프론트엔드 영역이 많아지고 복잡해져서 유지보수가 어려워지기 시작했습니다. 그렇기 때문에 이를 효율적으로 다뤄야 할 필요가 생겼습니다.&lt;/li&gt;
+&lt;li&gt;프론트엔드에 마이크로 서비스의 개념을 도입하여 전체 화면을 작동할 수 있는 단위로 나누어 개발한 후 서로 조립하는 방식을 접목시켰습니다.&lt;/li&gt;
+&lt;li&gt;방법은 크게 멀티레포, 모노레포로 나뉩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;3. 모놀리식이란?&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 558px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsTAAALEwEAmpwYAAADH0lEQVQ4y4VUa5OaSBT1//+W/bCbymQquzNjxigCOtANCHQ3D3mDoshDhDjKBnAtM5lkb52ibp+uw2kufe+guYnz+dw0TZJuLc/wIttbtXBDy/GXr6+vzU8xuF2czqemaXQXqSE3Q6O70R+P7Ee8gsCY7st9//Y+3oqvbJysTY8YLlYNiViKFeimpx2Px18697KqqpLdNsvSLEvzPCv2eV7kbZ6luzTpkaTbNEtPp/MPzn7ozReUYLBAo6HOAI3u0eUM1C8AhFZd3vS10+k86GwbRVsw8jPQp0CnfwVeo4Ulq61EyZorLp9m6aA5N6ZHUAisRDU3ynJ7gbmRzY18XS63ipWoKACSNVc9ILtcvF0PyrJUHM4vNCfFTortHeoTNyNuRm5Je4f8Qlc8ntemqg968V51gRnLvEaLy5lgsoLJQoORXQ4HEBpMT0KDATqNAkgi4QVN0FWMPIhDYQIfh7P7+9GfT+wnRn7mCAV0eo7GD/Td58mHB/puKg4Fk0U+4DCFfnDeyByhXvCEVUccpnhtqng8DgWOUHM0nilfu10Kh50zvjof9orDuzlxU+LlLW6/1s06Jr8wXk5wAH8SZ8RKkL1Ddvfsy3OFlahWoto75GbviZ0Ua5Gorxct4gUOBXMjW4lKItHoyfWChELLhN2xAxhvVpeCaSuRXnxh5NEEPk7FIU+ovs4veEJLXybCEyUOWXkkWXMUQKC3tyXL08G+F0fiGDw8sZdqz9Qx1Ns/NxWH/0w//j358MTeT8WhtJzhEI7hIzbl5twMquqg2LydtifU11KLWMIhbI+9U0kkXMh1S1qJwhN66Zh9U7Z3O4oDxQbIg7dQHF5xeNUFHSByIfKhagvxdn3twktjVFV9+C+q6lDXVV3X3+pvdRdVVR0Oh7Is67q+Kq/i822LH4/HTRJHmyCK/SgO1tuoPOzfjKp3xlC32UgYsuqIJxSvURxpQYHn3vN3M6xpmtfjSfdUJ0fLrfJ58pdgMsHBkG2uqqr/FzdN44RL4kvYF4HGKDbQIxlbi9/NsDcDuCzLosj3ZVHsi6Iojsd35u538b/UXQ8V2CyV3wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;모놀리식이란?&quot;
+        title=&quot;모놀리식이란?&quot;
+        src=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png&quot;
+        srcset=&quot;/static/e514013b03104b37fd097ab6cd9ec6c6/c26ae/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 158w,
+/static/e514013b03104b37fd097ab6cd9ec6c6/6bdcf/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 315w,
+/static/e514013b03104b37fd097ab6cd9ec6c6/42a8d/%EB%AA%A8%EB%86%80%EB%A6%AC%EC%8B%9D%EC%9D%B4%EB%9E%80.png 558w&quot;
+        sizes=&quot;(max-width: 558px) 100vw, 558px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;단순성 : 모든 코드가 단일 코드 베이스이기 때문에 로컬에서 실행 시 단일 애플리케이션만 실행하면 됩니다.&lt;/li&gt;
+&lt;li&gt;간편한 배포 : 단일 프로젝트를 배포하면 되기 때문에 간편합니다.&lt;/li&gt;
+&lt;li&gt;디버깅과 테스트가 쉬움 : 모든 코드가 단일 프로젝트에 있기 때문에 디버깅 및 테스트가 쉬움&lt;/li&gt;
+&lt;li&gt;쉬운 모니터링 : 코드가 단일 프로젝트에 존재하기 때문에 오류가 발생한 위치를 찾기 쉽습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;유지 보수의 어려움 : 프로그램 규모가 커질수록 유지보수가 힘들어집니다.&lt;/li&gt;
+&lt;li&gt;유연하지 않는 확장성 : 모놀리식도 확장은 가능하지만 특정 단위로 확장은 불가능하고 전체 프로젝트 단위로 확장해야 합니다.&lt;/li&gt;
+&lt;li&gt;대규모 팀 작업이 어려움 : 모든 팀이 동일한 코드, 동일한 프로젝트에서 작업하기 때문에 코드의 충돌 가능성이 높고 이에 따른 다른 개발자의 작업에 영향을 줄 수 있습니다.&lt;/li&gt;
+&lt;li&gt;기술 사용 제한 : 기존 프로젝트를 다른 기술로 변환하기 어렵기 때문에 일반적으로 프로젝트를 구성하면 오랫동안 동일한 기술을 사용합니다.&lt;/li&gt;
+&lt;li&gt;느린 배포 속도 : 하나의 레포지티에서 배포하므로 속도가 느려집니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그렇다면 언제 모놀리식을 사용할까요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;규모가 작은 애플리케이션의 경우&lt;/li&gt;
+&lt;li&gt;현 비즈니스를 성장할 계획이 없거나, 복잡한 시스템이 없고 관리가 필요하지 않을 경우&lt;/li&gt;
+&lt;li&gt;아직 아이디어 구상 단계일 경우&lt;/li&gt;
+&lt;li&gt;팀의 규모가 작거나 신생 팀일 경우와 새로운 도메인을 시작할 때&lt;/li&gt;
+&lt;li&gt;**MVP(최소 기능 제품)**일 경우는 모놀리식이 피드백을 빠르게 수정이 가능합니다.&lt;/li&gt;
+&lt;li&gt;주된 작업이 CRUD일 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;4. 모놀리식에서 마이크로서비스, 마이크로 프론트엔드 까지&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;마이크로서비스는 애플리케이션을 도메인을 기준으로 모놀리식한 백엔드의 서비스를 분리하는 것을 의미합니다. 마이크로 프론트엔드는 이 개념을 프론트엔드 세계로 확장한 것입니다.&lt;/li&gt;
+&lt;li&gt;마이크로프론트엔드는 웹 어플리케이션을 서로 다른 모듈 및 개별 기능으로 분할하고 조합하는 아키텍처이며 백엔드의 마이크로 서비스의 이점인 유연성과 보다 높은 개발 생산성을 가집니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.30379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQoz52QyytEYRjGbf0DNoqNW8TKRjYsLC2sKISaiLW1f0FRbjXlkmtEojAzxwzHXI7LSBkzaVyanHHOGM3nXGa+73zf9+qYRLLh6V28Pe/7exZPAfxLnHMAKODflPc/5vOJMW4RYBQ+roQQWZYVVaWU2vCPyHhSjTzKkYScyWIAeMpo7uCZFLnVKQfO4tEbr9t1LHieHu5s+DGpxBJyNJF8SafjBq89Nsu9RpFL67vKPWOo8+MKn1ksmD3XFEhufHNvavtgbGN3csdjw01+rUJAlQJqDWkxnTcESX2AVIl4KGIls6zW+1Zz+FbqQr1hU6fQca53nma6TlF32LDhRsmqPsGVIm45s+5N3n5JWs9JcwiPxDnW0MTCyszy+qhzfmvfTSmdXV13Lq1Nzy2ubO3YMLIgRUDBYHGI6rzsKFfiyxW6sm1h8mxavQGlX0o5Qsrw5atBeV9QHZRSAyHVIaW+Csv3m2VcfGXeNBPSLKozg4KIQMyAH8GFZqfn9wCCIIJf2v6T3gEu89YMOOqGKgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;웹 아키텍쳐&quot;
+        title=&quot;웹 아키텍쳐&quot;
+        src=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png&quot;
+        srcset=&quot;/static/7a155f8e4b49a0fc45f8fdb7afbf8070/c26ae/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 158w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/6bdcf/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 315w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/f058b/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 630w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/40601/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 945w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/78612/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1260w,
+/static/7a155f8e4b49a0fc45f8fdb7afbf8070/062c8/%EC%9B%B9%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.png 1386w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;5. 멀티레포 vs 모노레포&lt;/h1&gt;
+&lt;p&gt;마이크로프론트엔드를 구현하는 구조에는 멀티레포와 모노레포가 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByklEQVQoz3WSWW7cMAxA5/4/PUYv0Os0aJPY47FkWbvETSzkadL8lBAgQuLyuNxUtXew7jxDDDExi4GGzD7EkNJx+pprZIwIMabDex+j80FEVPWmqrnWt3VbH/vDWCJ+bakT3nezGft7vZ/OW2ymV2OPt/t9M3bZHsw8nUWERYaqjCFjELOINABARCaRMRUiEZExVHXovIhYx7gRUQVAog7TqPX+tpuQ88uy/Vrvy25SKfOHedmPn+/rdjifcoOuQ29IBET6IR1ARGrrqZZU5gk5I824Ief5WGuqdTrr5Yw0YXcXVBUQNutiKe+7XYw155lrRZqZH+5cdmu9DyU3gDHGDRBV9fVhv33/MSkQG0Bp7YzJpzyzfWCHkl2MqZTSWwf4i03MpbXXbWcRQPBpsu3ufBzOeh9Ledrsp1/NYX0IudT+BRuJcm1jDEA4fEi1rvZ4HO7Sy4VNxoftcC6EWL44P8k/G4bEudarPTWVGnOGmZl8TtaHmHNutT2xibkBEDMxXwODZbcxl5d1+7Vui7lGRchXw1Z7uBBn5tkwvY0xWCSWejcHXiF0jM9akBAQ+VokGSOVujvPIvTcsCcti3T4B/8/Ieb+pcY/hEHuD4bkv/EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;멀티모노레포&quot;
+        title=&quot;멀티모노레포&quot;
+        src=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/9b815cea5bdf2ce49641a6f44415a8a1/c26ae/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/6bdcf/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/f058b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
+/static/9b815cea5bdf2ce49641a6f44415a8a1/e185b/%EB%A9%80%ED%8B%B0%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 691w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;5.1 멀티레포&lt;/h2&gt;
+&lt;p&gt;레포지티를 여러개로 나눠서 관리하는 방법&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABH0lEQVQoz5VSy2qFUAxUfFxfR8UnKuIDN6Io4s694Nr//4X+gimT1raL29K7GBLCyWQmOZIkSSTLMiF6nkfDMFDTNKQoCtf+ieszvklITNMk27bJMAxKkoSiKCLf98l1XdI07XVCkK3rSud5sjLLsnhIlmWc442u6wwMgBMME0LwYCHEhZqmaR+EjuPQNE20bRuVZUl1XTNg/fF4MCEiCFVVZRdpmjKqqsLgC+8dx/km7LqOlmXhRigG0AgS7Bhqi6JgdVCGeKt/anmeZzqOgwnRAIAEhFhDHMdMEgQBxxtPCdHc9z2N48gWIL9tW7YMQrxBfd93znE07PDXo0A6FOIoP68XhiEfBzmWjyHI74P8eWXsC3byPP/aF2qvfpt3DiDNMzJ4P40AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;멀티레포&quot;
+        title=&quot;멀티레포&quot;
+        src=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/05e81c28237ad5a2428ee4cb03c78359/c26ae/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 158w,
+/static/05e81c28237ad5a2428ee4cb03c78359/6bdcf/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 315w,
+/static/05e81c28237ad5a2428ee4cb03c78359/f058b/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 630w,
+/static/05e81c28237ad5a2428ee4cb03c78359/40601/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 945w,
+/static/05e81c28237ad5a2428ee4cb03c78359/5caea/%EB%A9%80%ED%8B%B0%EB%A0%88%ED%8F%AC.png 996w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;레포지티 별 담당자를 지정
+&lt;ul&gt;
+&lt;li&gt;수월한 패키지 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;레포지티의 빠른 CI Build
+&lt;ul&gt;
+&lt;li&gt;기능을 레포지티 별로 나눠서 개발 하므로 레포지티 크기가 작아짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;패키지의 명확한 분리로 인한 유연성 향상
+&lt;ul&gt;
+&lt;li&gt;레포지티 상 서로 연계 관계가 없기 때문에 추가, 수정, 유지 관리 편리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;중복된 설정 및 반복된 설치
+&lt;ul&gt;
+&lt;li&gt;모든 공통된 설정과 모듈들을 반복적으로 설정/설치해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;코드 재사용이 쉽지 않으므로 중복 코드 가능성이 높아짐
+&lt;ul&gt;
+&lt;li&gt;다른 레포지티 코드를 사용하기 위해서 추가 작업이 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;이슈의 분산
+&lt;ul&gt;
+&lt;li&gt;각 다른 레포지토리가 연관되어있는 이슈 트래킹 관리 어려움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;디펜던시 헬
+&lt;ul&gt;
+&lt;li&gt;프로젝트가 커지면 많은 레포지티가 생기고 그에 따른 다양한 의존관계가 생겨서 복잡해짐&lt;/li&gt;
+&lt;li&gt;여러 패키지들이 사용하는 같은 모듈에서 버전 차이 발생 및 충돌 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5.2 모노레포&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6ElEQVQoz42Ry26GIBSEuQQBhQNo0AJx4cKY+Bou2Pr+T9MU/pC/tkn7rbhkzgwDQghhjBFCnPOtIKVshw38g9cFpRQAuq5zznnvrbV1i/4Dxnjbtvu+Qwh93yulUkpKqRqnKzjn6lBrrSkQQr7EhJAQwnEcnPM6bhzHdzFjzHu/LMs8zzHGlFKMkVL6EqeUcs4A8BB/FJqbEOIZmxASYzzPs1b1LvbeT9MEAK4wDEMr75v4ui6tdRPXFPu+55wRQiGEluvpvK6rlLI6GGNaYUIIY0xd/N4/pVRrXR8GAMYYrTVj7M9/+gRr2xS8azeeNQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;모노레포&quot;
+        title=&quot;모노레포&quot;
+        src=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png&quot;
+        srcset=&quot;/static/a24eec5f0f49d64f64ed40afafbc479f/c26ae/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 158w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/6bdcf/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 315w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/f058b/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 630w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/40601/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 945w,
+/static/a24eec5f0f49d64f64ed40afafbc479f/5caea/%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC.png 996w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;레포지티 하나에서 나눠서 관리하는 방법(멀티레포의 장점은 단점으로 단점은 장점으로 변한다.)
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;공통 항목 단일화
+&lt;ul&gt;
+&lt;li&gt;eslint, Build, Unit Test 등 공통된 설정 및 필요한 node module을 한 번의 설치와 한 번의 설정으로 모든 패키지가 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;쉬운 코드 공유&lt;/li&gt;
+&lt;li&gt;단일 이슈 트래킹
+&lt;ul&gt;
+&lt;li&gt;모노레포 내 연관된 패키지들에 관한 (분산될 필요 없는) 이슈 트래킹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;효율적인 의존성 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;Repository의 거대화
+&lt;ul&gt;
+&lt;li&gt;분산되어 있던 모든 리소스를 하나의 레포로 합치면서 생기는 문제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;느린 CI Build
+&lt;ul&gt;
+&lt;li&gt;CI가 하나로 구성된다는 장점 == 규모가 커짐에 따라 분산된 CI 빌드보다 속도가 느릴 수밖에 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;무분별한 의존성
+&lt;ul&gt;
+&lt;li&gt;Package 간 의존성 관리가 쉽지만, 오히려 과도한 의존성 관계 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[HTTP 구조에 대해]]></title><description><![CDATA[HTTP 클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다. 이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다. 1. HTTP 1.1 구조에 대해 1.1 request 구조 HTTP…]]></description><link>https://www.lendingmachine.co.kr/blog/HTTP 1.1/</link><guid isPermaLink="false">https://www.lendingmachine.co.kr/blog/HTTP 1.1/</guid><pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;HTTP&lt;/h1&gt;
 &lt;p&gt;클라이언트 / 서버 모델을 따르는 프로토콜로 TCP/IP 프로토콜 위에서 동작합니다.&lt;/p&gt;
 &lt;p&gt;이때 웹에서 필요한 모든 종류의 데이터 HTML, 이미지, 오디오 등을 전송합니다.&lt;/p&gt;
 &lt;h1&gt;1. HTTP 1.1 구조에 대해&lt;/h1&gt;
@@ -1327,7 +1760,7 @@ TYPECODE_OVAL -&gt; ShapeOval&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB5ElEQVQoz2WSS47TQBCG56xcBIHEihvwENwCsYBZgLJgJAQZJxKZSSTHCXE7sd3v7upXQduZTAK1q6r/U/1d1VeISAjhjBFCdoQ475umkVLiECklRGSMtW3LOS/L0lrbD4GIV4i4m894cYveJaUw4f8w5/yw35/SrusopUfYGJNr4ILWvCf31SyGiGfhQwDnTjAAuCHNsBACglMJeNA2OSqZH3rj6KxmTCyXOYtxHAYAR5huq+5uZgSN1uaeNu4Sdpz3X78EzsbaI6y1/l1t0Hl0IUqpumaxLrwPGcRMhhDq3U41jScENlsMASw4GGwbY5qmQUQds22V7J7tH20jxpTauhbzORrj6hrKsqoW0sijbbbdtItbJWgAiym7cmdwtg2guz4FL2XfbVffbj5Q8XAqwYbXOh+5UPRwt5557y9g5zpJe2B709Igi/UPdoKllCFFG4F7JYMmXf3PZAtm0247S3tDbbBcSWPNEVYamBXa65jiuKEYL+/sQysyNgrigyDDB/HTum68DCJOJpP1uhq/xLhwpldMr4ZKZoqimE6nR/jTrydl+3Ho5Qs9e/70+vpznhDjqL4pX3yvXmZTMe/i3fu3r9+8ynBMoZWFhvo0mQtqwZzbpvqe6uVJoLRQWvyF/wBOHiO8ehDVNAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 72.15189873417721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6UlEQVQoz2WS2Y7TQBBF51v5EaSReOIPWAQ/wQMPLBJIkQAJkJ2RZiFS4mRiO7Hdm7u6eitod8bMwH2r7jqu27d8RkRN0wjOm7atm8Y617atUoomxRiJiHPedZ0QYrPZGGOGSUR0RkT75VIWBTkbx5GI/oeFEMfDYS77vv8LA0AkitZ6DWJorqsy+ED35LxHa2cYEe1UJlhKab0bIwqvTbSD4vkuj07dnIvVKlUh5GHGmBPMd1V/vQTFw3QEGv6BrRDs86cgeD4DAERMsNb6drsl68j5oNTYt1eb0jmfQEqk977e78dD65oGdzvyHo2xONk2xrRtS0Q6WhG0jnjgBzdPJgoxdnUtLy4IwNa1Xa+r6lKBOtlmt9vjVTFK5tFQTK7sPTjZRtQDi94rNfTb1Zevb5js7wLjLL3WuiClZsebaumcewBb2yk2ID9Cz7wqNz+4vFuVUsrHAAGFG5XXdbfPT5oFCNt+1yMbgBlvxKgA4ASPgByVdjrEkBMK4eGene9kwsIUfph0go/yp7FD3gwRLRaLqqryL5EDF7ASMO15+npZLouiOMHvLh+tu7fTXdrQ+fnjDx/f5wm5+9v6yffqaTIVUhavXr98/uJZgkP0nSo11vNkIZlBuG+b6RsGv+aGUctRyz/wb37MI+POVlBOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1393,7 +1826,7 @@ TYPECODE_OVAL -&gt; ShapeOval&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQY0wExAc7+AObq7/Dx9u/d5vbq8Ovi5/Tr7PHl4uzv8eDp7evd4Oze3+/o3fHw6s/e4ubx89Xm5evy9ODn6+/k5OrZ2QBKf8duYbj/MKD8S6X9mcztcX3nZ0Z8mLBarNvWSHv3TFn/sirBw2VW3/8t3O1A7uhGvNZuqtLba3T/YV8AMF6eUUaS2BJ40TCAy3OfwVZgukgsXnSKQYiwqixZxi8824wVm5xMNa7OG7HAH724LJSrSoCltE1V3EJAAD09PTg5OENBQjs7O0NBQjs7Oz4+Pjs7PD0/P0I+P0E+QEBAPjw7OkRJSjs8O0JGRjs7O0BBQj89PUVCQgA5OTk3Nzc5Ojk3ODg7PDs4OTk5OTo4ODg7Ozs6Ozw6Ozs7Ozw4ODk/Pj46OTk9PDw3Nzc6Ojo5Ojo7PDyql5O4rCFNnwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQY0wExAc7+AObr8PHy9/Dd5/fq8Ozj6PTs7PLm4+3w8uHq7uze4e7e4PDp3vLx68/f4+fy9Nbn5+zz9eHo7PDk5evb2gBHfsVsYLb/L5/8SaP7mMrrcHvmZUR7lq5Yq9nUR3n1Slj/sSrBwWRV3f8r2es/7eZEutRtqNHaanL/X10AMWGgU0mV2xR60zGCzXWhw1hivEouYHaMQ4qyrS5byTE+3o4XnZ5ON7DQHbPCIb65LpatTIKntlBX3kRCADw8PTg4OEJAQTs6O0JBQjo6Oj49PDo6Ozw+P0E9PkA9P0BAPTs6OkRISjo7O0JGRjo6Oj9BQj89PURBQQA5OTg2NzY3Ozg2ODc6Ozo3OTk3OTo4ODg7Ojo5PDs5PDs5Ojw4ODlAPT06ODg9Ozs4NzY6OTk4Ojo6PDzTF5PQ+uW2zQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
